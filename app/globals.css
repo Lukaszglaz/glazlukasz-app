@@ -1,10 +1,64 @@
 @import "tailwindcss";
 
+/* ===========================
+   Zmienne kolorów (LIGHT MODE)
+   =========================== */
+:root {
+  /* Tła */
+  --bg-page: #ffffff;
+  --bg-surface: #eaeaea;
+
+  /* Tekst */
+  --text-primary: #000000;
+  --text-secondary: #2f2f2f;
+
+  /* Akcenty */
+  --color-accent: #4fcabe;
+  --color-accent-hover: #3fa298;
+  --color-border: #808080;
+
+  /* Inne */
+  --blur-bg: rgba(255, 255, 255, 0.8);
+}
+
+/* ===========================
+   Tryb ciemny (DARK MODE)
+   =========================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-page: #000000;
+    --bg-surface: #1a1a1a;
+
+    --text-primary: #ffffff;
+    --text-secondary: #c7c7c7;
+
+    --color-accent: #4fcabe;
+    --color-accent-hover: #3fa298;
+    --color-border: #4d4d4d;
+
+    --blur-bg: rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* ===========================
+   Tailwind Theme Integration (v4+)
+   =========================== */
+@theme inline {
+  --color-bg-body: var(--bg-page);
+  --color-bg-card: var(--bg-surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-border: var(--color-border);
+  --color-blur-bg: var(--blur-bg);
+}
+
+/* ===========================
+   Styl bazowy dla całego dokumentu
+   =========================== */
 body {
-  background-color: #090909;
-  color: #fafafa;
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  background: var(--color-bg-body);
+  color: var(--color-text-primary);
+  font-family: "Poppins", sans-serif;
 }
