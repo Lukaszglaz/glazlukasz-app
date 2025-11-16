@@ -18,6 +18,8 @@
   --color-destructive: #cc3333;
   --color-destructive-hover: #a02828;
 
+  --color-checked-bg: #191919;
+
   --blur-bg: rgba(0, 0, 0, 0.8);
 }
 /* ===========================
@@ -55,6 +57,7 @@
   --color-destructive: var(--color-destructive);
   --color-destructive-hover: var(--color-destructive-hover);
   --color-blur-bg: var(--blur-bg);
+  --color-checked-bg: var(--color-checked-bg);
 }
 
 /* ===========================
@@ -64,4 +67,11 @@ body {
   background: var(--color-bg-body);
   color: var(--color-text-primary);
   font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  /* Tło zaznaczenia - użycie stałego, ciemnego koloru #191919 */
+  background: var(--color-checked-bg);
+  /* Kolor tekstu jest kolorem tła strony dla kontrastu */
+  color: var(--color-accent);
 }
