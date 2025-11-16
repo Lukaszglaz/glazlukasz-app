@@ -4,23 +4,22 @@
    Zmienne kolorów (LIGHT MODE)
    =========================== */
 :root {
-  /* Tła */
-  --bg-page: #ffffff;
-  --bg-surface: #eaeaea;
+  --bg-page: #f2f2f2;
+  --bg-surface: #e6e6e6;
 
-  /* Tekst */
-  --text-primary: #000000;
-  --text-secondary: #2f2f2f;
+  --text-primary: #0d0d0d;
+  --text-secondary: #1a1a1a;
 
-  /* Akcenty */
   --color-accent: #4fcabe;
-  --color-accent-hover: #3fa298;
-  --color-border: #808080;
+  --color-accent-hover: #72d5cb;
+  --text-tertiary: #2f7972;
+  --color-border: #d9d9d9;
 
-  /* Inne */
-  --blur-bg: rgba(255, 255, 255, 0.8);
+  --color-destructive: #cc3333;
+  --color-destructive-hover: #a02828;
+
+  --blur-bg: rgba(0, 0, 0, 0.8);
 }
-
 /* ===========================
    Tryb ciemny (DARK MODE)
    =========================== */
@@ -34,6 +33,7 @@
 
     --color-accent: #4fcabe;
     --color-accent-hover: #3fa298;
+    --text-tertiary: #2f7972;
     --color-border: #4d4d4d;
 
     --blur-bg: rgba(0, 0, 0, 0.8);
@@ -50,7 +50,10 @@
   --color-text-secondary: var(--text-secondary);
   --color-accent: var(--color-accent);
   --color-accent-hover: var(--color-accent-hover);
+  --color-tertiary: var(--text-tertiary);
   --color-border: var(--color-border);
+  --color-destructive: var(--color-destructive);
+  --color-destructive-hover: var(--color-destructive-hover);
   --color-blur-bg: var(--blur-bg);
 }
 
