@@ -7,7 +7,7 @@ type PartnerBenefitCardVariant =
   | "tertiary"
   | "quaternary";
 
-type CardHeightVariant = "very-low" | "low" | "medium" | "medium-max";
+type CardHeightVariant = "veryLow" | "low" | "medium" | "mediumMax";
 
 const VARIANT_GRADIENT_STYLES: Record<PartnerBenefitCardVariant, string> = {
   primary:
@@ -24,10 +24,10 @@ const HEIGHT_VARIANT_STYLES: Record<
   CardHeightVariant,
   { height: string; marginTop: string }
 > = {
-  "very-low": { height: "min-h-[19rem]", marginTop: "mt-24" },
+  veryLow: { height: "min-h-[19rem]", marginTop: "mt-24" },
   low: { height: "min-h-[22rem]", marginTop: "mt-16" },
   medium: { height: "min-h-[25rem]", marginTop: "mt-8" },
-  "medium-max": { height: "min-h-[28rem]", marginTop: "mt-0" },
+  mediumMax: { height: "min-h-[28rem]", marginTop: "mt-0" },
 };
 
 type PartnerBenefitCardProps = {
@@ -45,7 +45,7 @@ export const PartnerBenefitCard: React.FC<PartnerBenefitCardProps> = ({
   title,
   description,
   variant = "primary",
-  heightVariant = "medium-max",
+  heightVariant = "mediumMax",
   className,
   ...rest
 }) => {
