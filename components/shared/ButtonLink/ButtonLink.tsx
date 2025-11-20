@@ -29,6 +29,7 @@ type ButtonLinkProps = {
   variant?: ButtonVariant;
   size?: ButtonSize;
   fullWidth?: boolean;
+  isActive?: boolean;
 } & LinkProps &
   ComponentPropsWithoutRef<"a">;
 
@@ -36,11 +37,14 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
   variant = "primary",
   size = "md",
   fullWidth = false,
+  isActive = false,
   children,
   className,
   href,
   ...rest
 }) => {
+  const isNavVariant = variant === "clean" || variant === "secondary";
+
   return (
     <Link
       href={href}
