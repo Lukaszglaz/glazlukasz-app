@@ -1,8 +1,4 @@
 @import "tailwindcss";
-
-/* ===========================
-   Zmienne kolorów (LIGHT MODE)
-   =========================== */
 :root {
   --bg-page: #f2f2f2;
   --bg-surface: #e6e6e6;
@@ -20,11 +16,8 @@
 
   --color-checked-bg: #191919;
 
-  --blur-bg: rgba(0, 0, 0, 0.8);
+  --blur-bg: rgba(242, 242, 242, 0.85);
 }
-/* ===========================
-   Tryb ciemny (DARK MODE)
-   =========================== */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-page: #000000;
@@ -38,13 +31,10 @@
     --text-tertiary: #2f7972;
     --color-border: #4d4d4d;
 
-    --blur-bg: rgba(0, 0, 0, 0.8);
+    --blur-bg: rgba(242, 242, 242, 0.85);
   }
 }
 
-/* ===========================
-   Tailwind Theme Integration (v4+)
-   =========================== */
 @theme inline {
   --color-bg-body: var(--bg-page);
   --color-bg-card: var(--bg-surface);
@@ -60,9 +50,6 @@
   --color-checked-bg: var(--color-checked-bg);
 }
 
-/* ===========================
-   Styl bazowy dla całego dokumentu
-   =========================== */
 body {
   background: var(--color-bg-body);
   color: var(--color-text-primary);
@@ -70,8 +57,17 @@ body {
 }
 
 ::selection {
-  /* Tło zaznaczenia - użycie stałego, ciemnego koloru #191919 */
   background: var(--color-checked-bg);
-  /* Kolor tekstu jest kolorem tła strony dla kontrastu */
   color: var(--color-accent);
+}
+
+.logo-invertible {
+  filter: invert(1);
+  transition: filter 0.3s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo-invertible {
+    filter: none;
+  }
 }
