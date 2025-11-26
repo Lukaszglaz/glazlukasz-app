@@ -43,7 +43,7 @@ export const OfferCard: React.FC<OfferCardProps> = ({
   ...rest
 }) => {
   const baseCardStyles =
-    "flex flex-col items-center rounded-xl bg-bg-card/70 shadow-sm hover:shadow-accent-hover/60 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover: text-text-primary cursor-pointer";
+    "flex flex-col items-center rounded-xl  text-center bg-bg-card/70 shadow-sm hover:shadow-accent-hover/60 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover: text-text-primary cursor-pointer";
 
   const baseIconStyles = "h-10 w-10";
   const styles = CARD_SIZE_STYLES[size];

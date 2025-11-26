@@ -60,7 +60,7 @@ export const HeaderMobile: React.FC<HeaderMobileProps> = ({
 
   return (
     <div className="lg:hidden">
-      <header className="bg-color-blur-bg fixed top-0 left-0 z-50 h-20 w-full backdrop-blur-md transition-all duration-300">
+      <header className="bg-color-blur-bg fixed top-0 left-0 z-50 h-20 w-full overflow-hidden backdrop-blur-md transition-all duration-300">
         <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6">
           <Link
             href={logoHref}
