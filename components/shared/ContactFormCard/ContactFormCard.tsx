@@ -92,7 +92,7 @@ export const ContactFormCard = () => {
           &nbsp;lub skorzystać z formularza kontaktowego.
         </p>
 
-        <div className="mt-2 w-full max-w-sm overflow-hidden rounded-xl">
+        <div className="mx-auto mt-2 w-full max-w-sm overflow-hidden rounded-xl lg:mx-0">
           <div className="relative h-0 w-full pb-[56.25%]">
             <Image
               src={ContactImage}

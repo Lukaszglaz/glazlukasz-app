@@ -29,7 +29,7 @@ const CARD_SIZE_STYLES: Record<
   large: {
     card: "max-w-xs text-center p-8",
     icon: "text-accent mb-6",
-    title: "text-xl font-extrabold mb-4",
+    title: "text-xl font-semibold mb-4",
     description: "text-sm  text-gray-500",
   },
 };

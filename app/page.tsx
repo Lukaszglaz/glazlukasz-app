@@ -18,6 +18,7 @@ import {
 
 import projectOneImage from "@/assets/images/showCaseCard/ProjectOne.jpg";
 import projectTwoImage from "@/assets/images/showCaseCard/ProjectTwo.jpg";
+import { ContactFormCard } from "@/components/shared/ContactFormCard/ContactFormCard";
 
 export default function Home() {
   const offerData = [
@@ -304,6 +305,17 @@ export default function Home() {
             />
           ))}
         </div>
+      </div>
+
+      <div className="mt-10">
+        <HeadlineGroup
+          header="Skontaktuj się ze mną!"
+          description="Masz pytania lub chcesz omówić swój projekt? Skontaktuj się ze mną, a chętnie pomogę Ci w realizacji Twoich celów online."
+        />
+      </div>
+
+      <div className="mt-4 mb-10 p-4">
+        <ContactFormCard />
       </div>
     </div>
   );
