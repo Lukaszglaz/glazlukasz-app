@@ -31,6 +31,10 @@
     --text-tertiary: #2f7972;
     --color-border: #4d4d4d;
 
+    --color-destructive: #cc3333;
+    --color-destructive-hover: #a02828;
+    --color-checked-bg: #191919;
+
     --blur-bg: rgba(242, 242, 242, 0.85);
   }
 }
@@ -44,6 +48,9 @@
   --color-accent-hover: var(--color-accent-hover);
   --color-tertiary: var(--text-tertiary);
   --color-border: var(--color-border);
+
+  --color-text-destructive: var(--color-destructive);
+
   --color-destructive: var(--color-destructive);
   --color-destructive-hover: var(--color-destructive-hover);
   --color-blur-bg: var(--blur-bg);
