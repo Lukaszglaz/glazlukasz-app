@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderNavProps> = ({
   const activeHref = usePathname();
 
   return (
-    <header className="bg-color-blur-bg fixed top-0 left-0 z-50 w-full backdrop-blur-md">
+    <header className="bg-color-blur-bg fixed top-0 left-0 z-50 w-full overflow-hidden backdrop-blur-md">
       <div className="mx-auto hidden h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:flex lg:px-8">
         <Link
           href={logoHref}

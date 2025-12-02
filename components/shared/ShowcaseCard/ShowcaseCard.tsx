@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "../ButtonLink/ButtonLink";
-import Image, { StaticImageData } from "next/image";
+import Image, { ImageProps } from "next/image";
 
 interface ShowcaseCardProps {
   title: string;
   description: string;
-  imageUrl: string | StaticImageData;
+  imageUrl: ImageProps["src"];
   reverse?: boolean;
   href: string;
 }
@@ -51,7 +51,7 @@ export const ShowcaseCard = ({
           reverse ? "lg:order-1" : "lg:order-2",
         )}
       >
-        <h2 className="mb-3 text-3xl font-extrabold text-text-primary">
+        <h2 className="mb-3 text-3xl font-semibold text-text-primary">
           {title}
         </h2>
         <p className="mb-6 text-base leading-relaxed text-text-secondary">

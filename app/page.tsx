@@ -1,65 +1,322 @@
-import Image from "next/image";
+import { ButtonLink } from "@/components/shared/ButtonLink/ButtonLink";
+import { ContactCTA } from "@/components/shared/ContactCTA/ContactCTA";
+import { HeadlineGroup } from "@/components/shared/HeadlineGroup/HeadlineGroup";
+import { OfferCard } from "@/components/shared/OfferCard/SmallOfferCard";
+import { PartnerBenefitCard } from "@/components/shared/PartnerBenefitCard/ParterBenefitCard";
+import { ShowcaseCard } from "@/components/shared/ShowcaseCard/ShowcaseCard";
+import {
+  Handshake,
+  Layout,
+  Palette,
+  PiggyBank,
+  Rocket,
+  Shield,
+  Timer,
+  Users,
+  Zap,
+} from "lucide-react";
+
+import projectOneImage from "@/assets/images/showCaseCard/ProjectOne.jpg";
+import projectTwoImage from "@/assets/images/showCaseCard/ProjectTwo.jpg";
+import { ContactFormCard } from "@/components/shared/ContactFormCard/ContactFormCard";
 
 export default function Home() {
+  const offerData = [
+    {
+      title: "Szybka Realizacja",
+      description:
+        "Twoja strona gotowa w mgnieniu oka dzięki efektywnemu procesowi tworzenia.",
+      icon: Rocket,
+    },
+    {
+      title: "Innowacyjne Rozwiązania",
+      description:
+        "Wykorzystuję najnowsze technologie, aby Twoja strona była nowoczesna i funkcjonalna.",
+      icon: Zap,
+    },
+    {
+      title: "Kompleksowe Wsparcie",
+      description:
+        "Jestem zawsze gotów, aby pomóc Ci w razie potrzeby i zapewnić wsparcie techniczne.",
+      icon: Users,
+    },
+    {
+      title: "Bezpieczeństwo i Prywatność",
+      description:
+        "Twoje dane są chronione dzięki zaawansowanym środkom bezpieczeństwa.",
+      icon: Shield,
+    },
+    {
+      title: "Profesjonalna Obsługa",
+      description:
+        "Zapewniam pełne wsparcie od planowania po wdrożenie i utrzymanie Twojej strony.",
+      icon: Timer,
+    },
+    {
+      title: "Transparentność Kosztów",
+      description:
+        "Jasna i czytelna wycena bez ukrytych opłat, abyś wiedział, za co płacisz.",
+      icon: PiggyBank,
+    },
+  ];
+
+  const offerDataLarge = [
+    {
+      title: "Strony Internetowe Skoncentrowane na Wyniku",
+      description:
+        "Tworzę witryny, które nie tylko **wyglądają świetnie**, ale są strategicznie zaprojektowane, aby **działać doskonale** – zoptymalizowane pod kątem szybkiej konwersji i intuicyjnej obsługi.",
+      icon: Layout,
+    },
+    {
+      title: "Profesjonalne Projektowanie Wizualne (UI/UX)",
+      description:
+        "Zajmuję się projektowaniem każdego detalu, dbając, by Twoja strona była **estetyczna, funkcjonalna i przyjazna** dla użytkowników. Zadbaj o to, by przyciągała uwagę od pierwszego wejrzenia.",
+      icon: Palette,
+    },
+    {
+      title: "Spójny Branding i Identyfikacja Wizualna",
+      description:
+        "Buduj **zaufanie i lojalność** klientów. Oferuję wsparcie w kreowaniu spójnego i przemyślanego **brandingu**, który odzwierciedla wartości i osobowość Twojego biznesu.",
+      icon: Zap,
+    },
+    {
+      title: "Strategiczne Konsultacje Projektowe",
+      description:
+        "Potrzebujesz pewności co do designu lub **strategii wizualnej**? Chętnie podzielę się wiedzą i doświadczeniem, aby wspólnie znaleźć **najlepsze i najbardziej efektywne rozwiązania** dla Twojego projektu.",
+      icon: Handshake,
+    },
+  ];
+
+  const benefitData = [
+    {
+      stepNumber: 1,
+      title: "Ekspertyza, Która Gwarantuje Jakość",
+      description:
+        "Moje bogate doświadczenie i szeroka wiedza pozwalają mi zapewnić najwyższą jakość usług w obszarze projektowania i tworzenia innowacyjnych stron internetowych oraz zaawansowanych aplikacji internetowych.",
+      variant: "primary",
+    },
+    {
+      stepNumber: 2,
+      title: "Indywidualne Dostosowanie do Celów",
+      description:
+        "Jesteś dla mnie najważniejszy. Dlatego dostosowuję podejście do Twoich konkretnych potrzeb i oczekiwań, zapewniając kompleksowe wsparcie i elastyczność na każdym etapie współpracy.",
+      variant: "secondary",
+    },
+    {
+      stepNumber: 3,
+      title: "Pionierskie i Nowoczesne Rozwiązania",
+      description:
+        "Nieustannie poszukuję innowacyjnych rozwiązań i narzędzi, które pozwolą Ci być liderem w Twojej branży. Moje projekty przekraczają Twoje oczekiwania i podążają za dynamicznym rynkiem.",
+      variant: "tertiary",
+    },
+    {
+      stepNumber: 4,
+      title: "Solidność Kodu i Skalowalność",
+      description:
+        "Stawiam na solidną strukturę kodu, która gwarantuje nie tylko płynne działanie strony, ale także łatwą skalowalność i możliwość dalszego, efektywnego rozwoju bez utraty wydajności.",
+      variant: "quaternary",
+    },
+  ] as const;
+
+  const showcaseData = [
+    {
+      title: "Strony WWW Generujące Konwersje",
+      description:
+        "Portfolio prezentuje projekty, które łączą wyjątkowy design z perfekcyjną optymalizacją pod kątem konwersji i intuicyjnej obsługi (UX). Odkryj, jak szczegółowa dbałość o detale przekłada się na mierzalny sukces.",
+      imageUrl: projectOneImage,
+      reverse: false,
+      href: "#",
+      cta: "Zobacz moją ofertę",
+    },
+    {
+      title: "Zaawansowane Aplikacje Web",
+      description:
+        "Przejrzyj nasze najnowsze realizacje, które wyróżniają się unikalnym podejściem do logiki biznesowej i skalowalnej architektury. Zobacz, jak profesjonalna wizja i techniczna solidność napędzają trwały rozwój.",
+      imageUrl: projectTwoImage,
+      reverse: true,
+      href: "#",
+      cta: "Zobacz moje aplikacje",
+    },
+  ];
+
+  const processData = [
+    {
+      stepNumber: 1,
+      title: "Strategia i Weryfikacja Koncepcji",
+      description:
+        "Rozpoczynamy od głębokiej analizy celu i weryfikacji pomysłów. Odkrywam unikalne perspektywy i podejścia, które strategicznie wzmocnią Twój projekt na rynku.",
+      variant: "primary",
+      heightVariant: "mediumMax",
+    },
+    {
+      stepNumber: 2,
+      title: "Projektowanie UI/UX i Wyróżnianie Marki",
+      description:
+        "Ożywiam Twoją wizję przy pomocy kreatywnego designu i wizualnej narracji. Tworzę dzieła, które nie tylko oddają wartości Twojej marki, ale angażują odbiorców i wybijają się na tle konkurencji.",
+      variant: "secondary",
+      heightVariant: "medium",
+    },
+    {
+      stepNumber: 3,
+      title: "Skalowalne Wdrożenie i Solidność Kodu",
+      description:
+        "Wykorzystuję najnowsze technologie do przeniesienia projektu na nowy poziom. Zapewniam zaawansowane narzędzia, tworząc interaktywne efekty i wydajną, skalowalną strukturę kodu.",
+      variant: "tertiary",
+      heightVariant: "low",
+    },
+    {
+      stepNumber: 4,
+      title: "Optymalizacja, Wdrożenie i Stałe Wsparcie",
+      description:
+        "Dokładnie analizuję i dopasowuję projekt do Twoich oczekiwań. Otrzymujesz gotową stronę WWW/aplikację, a także kompleksowe wsparcie techniczne i opiekę po wdrożeniu.",
+      variant: "quaternary",
+      heightVariant: "veryLow",
+    },
+  ] as const;
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between bg-white px-16 py-32 sm:items-start dark:bg-black">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="xl:max-w-8xl mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div>
+        <HeadlineGroup
+          header="Stworzę stronę internetową dla Ciebie!"
+          description="Specjalizuję się w tworzeniu nowoczesnych stron WWW i aplikacji. Zapewniam kompleksowe wsparcie, od strategii SEO po pełną obsługę techniczną, aby Twój projekt odniósł sukces."
+          className="mt-24"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl leading-10 font-semibold tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <div className="ml-4">
+          <ButtonLink variant="primary" href={"#"} className="mr-4">
+            Zobacz moją ofertę!
+          </ButtonLink>
+          <ButtonLink variant="clean" href={"#"}>
+            Napisz do mnie!
+          </ButtonLink>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="bg-foreground text-background flex h-12 w-full items-center justify-center gap-2 rounded-full px-5 transition-colors hover:bg-[#383838] md:w-[158px] dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+      </div>
+
+      <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <h2 className="mb-12 text-center text-3xl font-extrabold md:text-3xl">
+          Co oferuję
+        </h2>
+        <div className="grid grid-cols-1 justify-items-center gap-8 md:grid-cols-3">
+          {offerData.map((offer, index) => (
+            <OfferCard
+              size="small"
+              key={index}
+              title={offer.title}
+              description={offer.description}
+              icon={offer.icon}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          ))}
         </div>
-      </main>
+      </div>
+
+      <div>
+        <HeadlineGroup
+          header="Wyróżnij Swój Biznes. Zaprojektujmy Sukces Online."
+          description="Tworzę nowoczesne strony i aplikacje, które nie tylko przyciągają wzrok, ale przede wszystkim generują wyniki. Zainspirujmy Twoich klientów i przekształćmy ich w lojalne grono odbiorców."
+        />
+      </div>
+
+      <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 justify-items-center gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {offerDataLarge.map((offer, index) => (
+            <OfferCard
+              size="large"
+              key={index}
+              title={offer.title}
+              description={offer.description}
+              icon={offer.icon}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <HeadlineGroup
+          header="Gwarantowane Korzyści: Konkretne Rezultaty, Trwały Wzrost."
+          description="Od pierwszego kontaktu koncentruję się wyłącznie na Twoich celach biznesowych. Otrzymujesz efektywne strategie i kompletne wsparcie online: od profesjonalnego projektu strony, przez wdrożenie, po opiekę techniczną. Twój rozwój jest moim priorytetem."
+        />
+      </div>
+
+      <div className="mt-4">
+        <div className="flex flex-wrap justify-center gap-6 lg:justify-between">
+          {benefitData.map((benefit, index) => (
+            <PartnerBenefitCard
+              key={index}
+              stepNumber={benefit.stepNumber}
+              title={benefit.title}
+              description={benefit.description}
+              variant={benefit.variant}
+              className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]"
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-20">
+        <ContactCTA
+          title={"Masz Pytania? Zróbmy Pierwszy Krok!"}
+          description={
+            "Zacznijmy od bezpłatnej konsultacji. Opisz swój projekt, a ja wskażę najbardziej efektywne rozwiązania. Otrzymujesz pewność, że projekt będzie dopasowany do Twoich celów biznesowych."
+          }
+          buttonLabel={"Omówmy Twój Projekt"}
+        />
+      </div>
+
+      <div className="mt-20">
+        <HeadlineGroup
+          header="Zobacz, Jak Rozwijam Biznesy. Moje Najnowsze Projekty."
+          description="Przejrzyj wybrane projekty, które przyniosły klientom konkretne i mierzalne rezultaty. To praktyczne przykłady tego, jak efektywny design i solidne wdrożenie mogą podnieść wartość Twojej marki."
+        />
+      </div>
+
+      <div>
+        <div className="pb-16 md:pb-24">
+          {showcaseData.map((item, index) => (
+            <ShowcaseCard
+              key={index}
+              title={item.title}
+              description={item.description}
+              imageUrl={item.imageUrl}
+              reverse={item.reverse}
+              href={item.href}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <HeadlineGroup
+          header=" Proces Tworzenia Stron i Aplikacji Skrojony na Miarę Sukcesu"
+          description="Odkryj iteracyjny proces, który zamienia wizję w funkcjonalny sukces. Łączymy precyzyjną analizę potrzeb użytkowników z najwyższą jakością designu, aby dostarczyć cyfrowe doświadczenia, które angażują, konwertują i inspirują do działania."
+        />
+      </div>
+
+      <div className="mt-4">
+        <div className="flex flex-wrap justify-center gap-6 lg:justify-between">
+          {processData.map((process, index) => (
+            <PartnerBenefitCard
+              key={index}
+              stepNumber={process.stepNumber}
+              title={process.title}
+              description={process.description}
+              variant={process.variant}
+              heightVariant={process.heightVariant}
+              className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]"
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-10">
+        <HeadlineGroup
+          header="Skontaktuj się ze mną!"
+          description="Masz pytania lub chcesz omówić swój projekt? Skontaktuj się ze mną, a chętnie pomogę Ci w realizacji Twoich celów online."
+        />
+      </div>
+
+      <div className="mt-4 mb-10 p-4">
+        <ContactFormCard />
+      </div>
     </div>
   );
 }
