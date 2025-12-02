@@ -21,7 +21,7 @@ type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement>;
 export type InputBaseProps = {
   id: string;
   label: string;
-  type?: "email" | "text" | "textarea" | "password" | undefined;
+  type?: "text" | "email" | "textarea";
   className?: string;
   onFocus?: (e: InputFocusEvent) => void;
   onBlur?: (e: InputFocusEvent) => void;
