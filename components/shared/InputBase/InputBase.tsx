@@ -101,7 +101,7 @@ export const InputBase: React.FC<InputBaseProps> = ({
     },
   );
 
-  const textareaMinHeight = type === "textarea" ? "min-h-[50px]" : "";
+  const textareaMinHeight = type === "textarea" ? "min-h-[75px]" : "";
 
   const inputElement =
     type === "textarea" ? (
@@ -116,7 +116,7 @@ export const InputBase: React.FC<InputBaseProps> = ({
         onBlur={handleBlur}
         className={clsx(
           inputBaseClasses,
-          "resize-none",
+          "resize-none sm:p-3",
           className,
           textareaMinHeight,
         )}
