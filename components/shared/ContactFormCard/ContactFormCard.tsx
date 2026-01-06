@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 import toast, { Toaster } from "react-hot-toast";
-import { Send } from "lucide-react";
+import { Send, Check } from "lucide-react";
 import clsx from "clsx";
 
 import ContactImage from "@/assets/images/ContactFormCard/contact-write.jpg";
@@ -12,162 +12,255 @@ import { InputBase } from "@/components/shared/InputBase/InputBase";
 
 const CHAR_LIMIT = 500;
 
-export const ContactFormCard = () => {
-  type FormData = {
-    imie: string;
-    nazwisko: string;
-    email: string;
-    message: string;
-  };
+const AVAILABLE_SERVICES = [
+  "Strony WWW",
+  "Pozycjonowanie SEO",
+  "Hosting i Domeny",
+  "Aplikacje Internetowe",
+  "Bazy danych i e-mailing",
+  "Oprawa graficzna",
+  "Wsparcie techniczne online",
+];
 
-  const [formData, setFormData] = useState<FormData>({
+interface ContactFormProps {
+  showServices?: boolean;
+  showTerms?: boolean;
+  showSideContent?: boolean;
+}
+
+export const ContactFormCard = ({
+  showServices = false,
+  showTerms = false,
+  showSideContent = true,
+}: ContactFormProps) => {
+  const [formData, setFormData] = useState({
     imie: "",
     nazwisko: "",
     email: "",
     message: "",
+    services: [] as string[],
+    otherService: "",
+    terms: false,
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const toastShownRef = useRef(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    const { id, value } = e.target;
-
-    if (id === "message") {
-      const currentLength = value.length;
-
-      if (currentLength >= CHAR_LIMIT && !toastShownRef.current) {
-        toast.error(`Przekroczono limit ${CHAR_LIMIT} znaków!`);
-        toastShownRef.current = true;
-      } else if (currentLength < CHAR_LIMIT && toastShownRef.current) {
-        toastShownRef.current = false;
-      }
+    const { id, value, type } = e.target;
+    if (type === "checkbox") {
+      setFormData((prev) => ({
+        ...prev,
+        [id]: (e.target as HTMLInputElement).checked,
+      }));
+      return;
     }
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
 
-    setFormData({ ...formData, [id]: value });
+  const toggleService = (service: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      services: prev.services.includes(service)
+        ? prev.services.filter((s) => s !== service)
+        : [...prev.services, service],
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    if (!formData.imie || !formData.email || !formData.message) {
+    if (
+      !formData.imie ||
+      !formData.nazwisko ||
+      !formData.email ||
+      !formData.message
+    ) {
       toast.error("Wypełnij wymagane pola!");
-      setIsSubmitting(false);
       return;
     }
-
-    if (formData.message.length > CHAR_LIMIT) {
-      toast.error(`Wiadomość przekracza limit ${CHAR_LIMIT} znaków!`);
-      setIsSubmitting(false);
-      return;
-    }
-
+    setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
       toast.success("Wiadomość wysłana!");
-      setFormData({ imie: "", nazwisko: "", email: "", message: "" });
+      setFormData({
+        imie: "",
+        nazwisko: "",
+        email: "",
+        message: "",
+        services: [],
+        otherService: "",
+        terms: false,
+      });
     }, 1000);
   };
 
-  const messageCharCount = formData.message.length;
-
   return (
-    <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-12">
-      <Toaster position="bottom-right" reverseOrder={false} />
+    <div
+      className={clsx(
+        "grid items-start gap-4 lg:gap-8",
+        showSideContent ? "lg:grid-cols-2" : "grid-cols-1",
+      )}
+    >
+      <Toaster position="bottom-right" />
 
-      <div className="flex flex-col justify-start">
-        <h2 className="text-color-text-primary mb-4 text-2xl font-extrabold sm:text-3xl">
-          Kontakt
-        </h2>
-        <p className="text-color-text-secondary mb-6 max-w-md text-sm leading-relaxed">
-          Jeśli chcesz się ze mną skontaktować, możesz wysłać wiadomość na adres
-          <a
-            href="mailto:kontakt@glazlukasz.pl"
-            className="text-color-accent hover:text-color-accent-hover ml-1 font-semibold transition-colors duration-300"
-          >
-            kontakt@glazlukasz.pl
-          </a>
-          &nbsp;lub skorzystać z formularza kontaktowego.
-        </p>
-
-        <div className="mx-auto mt-2 w-full max-w-sm overflow-hidden rounded-xl lg:mx-0">
-          <div className="relative h-0 w-full pb-[56.25%]">
+      {showSideContent && (
+        <div className="flex flex-col space-y-3">
+          <h2 className="text-color-text-primary text-xl font-extrabold">
+            Kontakt
+          </h2>
+          <p className="text-color-text-secondary text-xs">
+            Email:{" "}
+            <a
+              href="mailto:kontakt@glazlukasz.pl"
+              className="text-color-accent font-semibold"
+            >
+              kontakt@glazlukasz.pl
+            </a>
+          </p>
+          <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-sm">
             <Image
               src={ContactImage}
               alt="Kontakt"
               fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="absolute inset-0 object-cover"
+              className="object-cover"
             />
           </div>
         </div>
-      </div>
+      )}
 
-      <div className="w-full lg:mt-0">
-        <h2 className="text-color-text-primary mb-8 text-2xl font-extrabold sm:text-3xl">
-          Formularz zgłoszeniowy
+      <div className="w-full space-y-4">
+        <h2 className="text-color-text-primary text-xl font-extrabold">
+          Formularz kontaktowy
         </h2>
-        <form onSubmit={handleSubmit}>
-          <div className="flex flex-col gap-4 sm:flex-row sm:gap-4">
-            <div className="w-full sm:w-1/2">
-              <InputBase
-                id="imie"
-                label="Imię"
-                value={formData.imie}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="w-full sm:w-1/2">
-              <InputBase
-                id="nazwisko"
-                label="Nazwisko"
-                value={formData.nazwisko}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          <div className="mt-8">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="flex flex-col gap-3 sm:flex-row">
             <InputBase
-              id="email"
-              label="E-mail"
-              type="email"
-              value={formData.email}
+              id="imie"
+              label="Imię"
+              value={formData.imie}
+              onChange={handleChange}
+            />
+            <InputBase
+              id="nazwisko"
+              label="Nazwisko"
+              value={formData.nazwisko}
               onChange={handleChange}
             />
           </div>
+          <InputBase
+            id="email"
+            label="E-mail"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
 
-          <div>
+          {showServices && (
+            <div className="space-y-2">
+              <p className="text-color-text-secondary text-md mb-6 font-bold">
+                Wybierz usługi:
+              </p>
+              <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-2">
+                {AVAILABLE_SERVICES.map((service) => {
+                  const isSelected = formData.services.includes(service);
+                  return (
+                    <label
+                      key={service}
+                      className="group flex cursor-pointer items-center space-x-2.5"
+                    >
+                      <div
+                        className={clsx(
+                          "flex h-6 w-6 shrink-0 items-center justify-center rounded border transition-all duration-200",
+                          isSelected
+                            ? "border-accent bg-accent/5"
+                            : "border-border group-hover:border-accent",
+                        )}
+                      >
+                        <input
+                          type="checkbox"
+                          className="hidden"
+                          checked={isSelected}
+                          onChange={() => toggleService(service)}
+                        />
+                        <Check
+                          className={clsx(
+                            "text-color-accent h-4 w-4 transition-opacity",
+                            isSelected ? "opacity-100" : "opacity-0",
+                          )}
+                        />
+                      </div>
+                      <span className="text-color-text-primary text-sm leading-tight">
+                        {service}
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
+              <div className="pt-1">
+                <InputBase
+                  id="otherService"
+                  label="Inna usługa..."
+                  value={formData.otherService}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+          )}
+
+          <div className="space-y-1">
             <InputBase
               id="message"
-              label="Treść Wiadomości: np. Zapytanie o Współpracę"
+              label="Treść"
               type="textarea"
               value={formData.message}
               onChange={handleChange}
               maxLength={CHAR_LIMIT}
             />
-            <p
-              className={clsx(
-                "mt-1 text-right text-xs",
-                messageCharCount >= CHAR_LIMIT
-                  ? "text-text-destructive"
-                  : "text-color-text-secondary",
-              )}
-            >
-              {messageCharCount}/{CHAR_LIMIT} znaków
+            <p className="text-color-text-secondary text-right text-[9px]">
+              {formData.message.length}/{CHAR_LIMIT}
             </p>
           </div>
 
-          <div className="mt-8 flex justify-end pt-4">
+          {showTerms && (
+            <label className="flex cursor-pointer items-start space-x-2.5">
+              <div
+                className={clsx(
+                  "mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border transition-all duration-200",
+                  formData.terms
+                    ? "border-accent bg-accent/5"
+                    : "border-border",
+                )}
+              >
+                <input
+                  type="checkbox"
+                  id="terms"
+                  className="hidden"
+                  checked={formData.terms}
+                  onChange={handleChange}
+                />
+                <Check
+                  className={clsx(
+                    "text-color-accent h-3.5 w-3.5 transition-opacity",
+                    formData.terms ? "opacity-100" : "opacity-0",
+                  )}
+                />
+              </div>
+              <span className="text-color-text-secondary text-sm leading-[1.6]">
+                Zgoda na przetwarzanie danych i polityka prywatności.
+              </span>
+            </label>
+          )}
+
+          <div className="flex justify-end pt-1">
             <Button
               variant="primary"
               type="submit"
-              disabled={isSubmitting || messageCharCount > CHAR_LIMIT}
-              className="px-6 py-2 text-sm"
+              disabled={isSubmitting}
+              className="px-4 py-1.5 text-[11px] tracking-wider uppercase"
             >
-              {isSubmitting ? "Wysyłanie..." : "Wyślij Wiadomość"}
-              <Send className="ml-2 h-4 w-4" />
+              {isSubmitting ? "..." : "Wyślij wiadomość"}{" "}
+              <Send className="ml-2 h-3 w-3" />
             </Button>
           </div>
         </form>
