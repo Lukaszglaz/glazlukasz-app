@@ -80,24 +80,19 @@ export const InputBase: React.FC<InputBaseProps> = ({
   }, [value, adjustHeight]);
 
   const labelClasses = clsx(
-    "absolute left-3 transition-all duration-200 ease-in-out pointer-events-none ",
+    "absolute left-0 transition-all duration-200 ease-in-out pointer-events-none",
     {
-      "transform -translate-y-[28px] text-[11px] font-semibold text-accent":
+      "transform -translate-y-6 text-[12px] font-medium text-accent opacity-100":
         isActive,
-
-      "top-1/2 -translate-y-1/2 text-base text-text-secondary":
-        !isActive && type !== "textarea",
-
-      "top-6 -translate-y-1/2 text-base text-text-secondary":
-        !isActive && type === "textarea",
+      "top-4 text-base text-text-secondary opacity-70": !isActive,
     },
   );
 
   const inputBaseClasses = clsx(
-    "w-full px-3 pt-6 border-b bg-transparent outline-none transition-all duration-200 ease-in-out rounded-sm",
+    "w-full pt-4 pb-2 bg-transparent border-b outline-none transition-all duration-300 ease-in-out",
     {
-      "border-accent": isActive,
-      "border-color-border": !isActive,
+      "border-accent": isFocused,
+      "border-white/20": !isFocused,
     },
   );
 
