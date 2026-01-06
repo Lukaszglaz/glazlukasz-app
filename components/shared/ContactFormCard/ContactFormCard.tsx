@@ -141,7 +141,7 @@ export const ContactFormCard = () => {
           <div>
             <InputBase
               id="message"
-              label="Treść Wiadomości. Np: Chciałbym porozmawiać o stworzeniu strony internetowej dla mojego biznesu..."
+              label="Treść Wiadomości: np. Zapytanie o Współpracę"
               type="textarea"
               value={formData.message}
               onChange={handleChange}
