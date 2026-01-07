@@ -26,7 +26,7 @@ const headerProps = {
     { id: 2, label: "Usługi", href: "/uslugi" },
     { id: 3, label: "Realizacje", href: "/realizacje" },
     { id: 4, label: "O Mnie", href: "/o-mnie" },
-    { id: 5, label: "Kontakt", href: "/kontakt" },
+    { id: 5, label: "Kontakt", href: "/contact" },
   ] as NavItem[],
   logoSrc: logoFullWhite,
   logoAlt: "Logo Glazlukasz.pl",
