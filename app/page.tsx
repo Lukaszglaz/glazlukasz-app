@@ -186,7 +186,7 @@ export default function Home() {
           <ButtonLink variant="primary" href={"#"} className="mr-4">
             Zobacz moją ofertę!
           </ButtonLink>
-          <ButtonLink variant="clean" href={"#"}>
+          <ButtonLink variant="clean" href={"/contact"}>
             Napisz do mnie!
           </ButtonLink>
         </div>
