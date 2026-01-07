@@ -92,7 +92,7 @@ export const InputBase: React.FC<InputBaseProps> = ({
     "w-full pt-4 pb-2 bg-transparent border-b outline-none transition-all duration-300 ease-in-out",
     {
       "border-accent": isFocused,
-      "border-white/20": !isFocused,
+      "border-primary": !isFocused,
     },
   );
 
