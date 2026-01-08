@@ -5,6 +5,8 @@ import { LucideIcon, X, CheckCircle2 } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { servicesData } from "@/app/data/services/servicesExplorerData";
+import { Button } from "@/components/shared/Button/Button";
+import { ButtonLink } from "@/components/shared/ButtonLink/ButtonLink";
 
 export const ServicesExplorer = () => {
   const searchParams = useSearchParams();
@@ -102,12 +104,14 @@ export const ServicesExplorer = () => {
                   {activeService.title}
                 </h2>
               </div>
-              <button
+              <Button
+                variant="clean"
+                size="sm"
                 onClick={() => setActiveId(null)}
-                className="rounded-full p-2 text-text-secondary transition-colors hover:bg-accent/10 hover:text-accent"
+                className="rounded-full p-2 text-text-secondary hover:bg-accent/10"
               >
                 <X size={28} />
-              </button>
+              </Button>
             </div>
 
             <div className="space-y-6">
@@ -132,9 +136,15 @@ export const ServicesExplorer = () => {
                 ))}
               </div>
 
-              <button className="mt-4 w-full rounded-2xl bg-accent py-5 font-extrabold text-black uppercase shadow-lg transition-all hover:scale-[1.01] hover:bg-accent-hover active:scale-[0.99]">
+              <ButtonLink
+                href="/contact"
+                variant="primary"
+                size="lg"
+                fullWidth
+                className="mt-4 py-5 font-extrabold uppercase shadow-lg"
+              >
                 Porozmawiajmy o projekcie!
-              </button>
+              </ButtonLink>
             </div>
           </div>
         )}
