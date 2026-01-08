@@ -35,7 +35,8 @@ export default function ContactPage() {
     },
     {
       title: "Zadzwoń",
-      description: "+48 504-527-956",
+      // description: "+48 504-527-956",
+      description: "+48 XXX-XXX-XXX",
       icon: Phone,
     },
     {

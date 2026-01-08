@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const headerProps = {
   navItems: [
     { id: 1, label: "Strona Główna", href: "/" },
-    { id: 2, label: "Usługi", href: "/uslugi" },
+    { id: 2, label: "Usługi", href: "/services" },
     { id: 3, label: "Realizacje", href: "/realizacje" },
     { id: 4, label: "O Mnie", href: "/o-mnie" },
     { id: 5, label: "Kontakt", href: "/contact" },
@@ -41,12 +41,12 @@ const footerProps = {
       "Skontaktuj się z nami w celu omówienia Twoich potrzeb związanych z tworzeniem stron internetowych i aplikacji.",
   },
   offerLinks: [
-    { label: "Strony WWW", href: "/uslugi/strony-www" },
-    { label: "Pozycjonowanie SEO", href: "/uslugi/seo" },
-    { label: "Aplikacje Internetowe", href: "/uslugi/aplikacje" },
-    { label: "Hosting i Domeny", href: "/uslugi/hosting" },
-    { label: "Oprawa graficzna", href: "/uslugi/grafika" },
-    { label: "Wsparcie techniczne", href: "/uslugi/wsparcie" },
+    { label: "Strony WWW", href: "/services?service=strony-www" },
+    { label: "Pozycjonowanie SEO", href: "/services?service=seo" },
+    { label: "Aplikacje Internetowe", href: "/services?service=aplikacje" },
+    { label: "Hosting i Domeny", href: "/services?service=hosting" },
+    { label: "Oprawa graficzna", href: "/services?service=grafika" },
+    { label: "Wsparcie techniczne", href: "/services?service=wsparcie" },
   ],
   clientLinks: [
     { label: "Polityka prywatności", href: "/polityka-prywatnosci" },
