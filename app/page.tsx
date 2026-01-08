@@ -183,7 +183,7 @@ export default function Home() {
           className="mt-24"
         />
         <div className="ml-4">
-          <ButtonLink variant="primary" href={"#"} className="mr-4">
+          <ButtonLink variant="primary" href={"/services"} className="mr-4">
             Zobacz moją ofertę!
           </ButtonLink>
           <ButtonLink variant="clean" href={"/contact"}>
