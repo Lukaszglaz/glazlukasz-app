@@ -9,6 +9,7 @@ import { Handshake, Layout, Palette, Zap } from "lucide-react";
 import projectOneImage from "@/assets/images/showCaseCard/ProjectOne.jpg";
 import projectTwoImage from "@/assets/images/showCaseCard/ProjectTwo.jpg";
 import { ContactFormCard } from "@/components/shared/ContactFormCard/ContactFormCard";
+import { offerData } from "./data/homePage/offerData";
 
 export default function Home() {
   const offerDataLarge = [
