@@ -6,7 +6,7 @@ export interface OfferDataLargeItem {
   icon: LucideIcon;
 }
 
-export const offerDataLarge = [
+export const offerDataLarge: OfferDataLargeItem[] = [
   {
     title: "Strony Internetowe Skoncentrowane na Wyniku",
     description:

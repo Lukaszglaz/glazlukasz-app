@@ -1,15 +1,16 @@
 import projectOneImage from "@/assets/images/showCaseCard/ProjectOne.jpg";
 import projectTwoImage from "@/assets/images/showCaseCard/ProjectTwo.jpg";
+import { StaticImageData } from "next/image";
 
 export interface ShowcaseDataItem {
   title: string;
   description: string;
-  imageUrl: string;
+  imageUrl: StaticImageData;
   reverse: boolean;
   href: string;
   cta: string;
 }
-export const showcaseData = [
+export const showcaseData: ShowcaseDataItem[] = [
   {
     title: "Strony WWW Generujące Konwersje",
     description:

@@ -4,7 +4,7 @@ export interface BenefitDataItem {
   description: string;
   variant: "primary" | "secondary" | "tertiary" | "quaternary";
 }
-export const benefitData = [
+export const benefitData: BenefitDataItem[] = [
   {
     stepNumber: 1,
     title: "Ekspertyza, Która Gwarantuje Jakość",

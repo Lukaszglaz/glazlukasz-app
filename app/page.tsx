@@ -4,7 +4,6 @@ import { HeadlineGroup } from "@/components/shared/HeadlineGroup/HeadlineGroup";
 import { OfferCard } from "@/components/shared/OfferCard/SmallOfferCard";
 import { PartnerBenefitCard } from "@/components/shared/PartnerBenefitCard/ParterBenefitCard";
 import { ShowcaseCard } from "@/components/shared/ShowcaseCard/ShowcaseCard";
-import { Handshake, Layout, Palette, Zap } from "lucide-react";
 import { ContactFormCard } from "@/components/shared/ContactFormCard/ContactFormCard";
 import { offerData } from "./data/homePage/offerData";
 import { offerDataLarge } from "./data/homePage/offerDataLarge";
