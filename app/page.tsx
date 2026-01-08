@@ -5,36 +5,13 @@ import { OfferCard } from "@/components/shared/OfferCard/SmallOfferCard";
 import { PartnerBenefitCard } from "@/components/shared/PartnerBenefitCard/ParterBenefitCard";
 import { ShowcaseCard } from "@/components/shared/ShowcaseCard/ShowcaseCard";
 import { Handshake, Layout, Palette, Zap } from "lucide-react";
-
-import projectOneImage from "@/assets/images/showCaseCard/ProjectOne.jpg";
-import projectTwoImage from "@/assets/images/showCaseCard/ProjectTwo.jpg";
 import { ContactFormCard } from "@/components/shared/ContactFormCard/ContactFormCard";
 import { offerData } from "./data/homePage/offerData";
 import { offerDataLarge } from "./data/homePage/offerDataLarge";
 import { benefitData } from "./data/homePage/benefitData";
+import { showcaseData } from "./data/homePage/showcaseData";
 
 export default function Home() {
-  const showcaseData = [
-    {
-      title: "Strony WWW Generujące Konwersje",
-      description:
-        "Portfolio prezentuje projekty, które łączą wyjątkowy design z perfekcyjną optymalizacją pod kątem konwersji i intuicyjnej obsługi (UX). Odkryj, jak szczegółowa dbałość o detale przekłada się na mierzalny sukces.",
-      imageUrl: projectOneImage,
-      reverse: false,
-      href: "#",
-      cta: "Zobacz moją ofertę",
-    },
-    {
-      title: "Zaawansowane Aplikacje Web",
-      description:
-        "Przejrzyj nasze najnowsze realizacje, które wyróżniają się unikalnym podejściem do logiki biznesowej i skalowalnej architektury. Zobacz, jak profesjonalna wizja i techniczna solidność napędzają trwały rozwój.",
-      imageUrl: projectTwoImage,
-      reverse: true,
-      href: "#",
-      cta: "Zobacz moje aplikacje",
-    },
-  ];
-
   const processData = [
     {
       stepNumber: 1,
