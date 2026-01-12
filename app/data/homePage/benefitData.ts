@@ -7,30 +7,30 @@ export interface BenefitDataItem {
 export const benefitData: BenefitDataItem[] = [
   {
     stepNumber: 1,
-    title: "Ekspertyza, Która Gwarantuje Jakość",
+    title: "Ekspercka wiedza i jakość",
     description:
-      "Moje bogate doświadczenie i szeroka wiedza pozwalają mi zapewnić najwyższą jakość usług w obszarze projektowania i tworzenia innowacyjnych stron internetowych oraz zaawansowanych aplikacji internetowych.",
+      "Wykorzystuję lata doświadczenia, aby dostarczać Ci produkty najwyższej klasy. Tworzę aplikacje, które są stabilne i dopracowane w każdym najmniejszym detalu.",
     variant: "primary",
   },
   {
     stepNumber: 2,
-    title: "Indywidualne Dostosowanie do Celów",
+    title: "Podejście dostosowane pod Ciebie",
     description:
-      "Jesteś dla mnie najważniejszy. Dlatego dostosowuję podejście do Twoich konkretnych potrzeb i oczekiwań, zapewniając kompleksowe wsparcie i elastyczność na każdym etapie współpracy.",
+      "Twoje cele są dla mnie priorytetem. Dopasowuję technologię do Twoich potrzeb, zapewniając pełną elastyczność i wsparcie na każdym etapie wspólnej pracy.",
     variant: "secondary",
   },
   {
     stepNumber: 3,
-    title: "Pionierskie i Nowoczesne Rozwiązania",
+    title: "Nowoczesność w standardzie",
     description:
-      "Nieustannie poszukuję innowacyjnych rozwiązań i narzędzi, które pozwolą Ci być liderem w Twojej branży. Moje projekty przekraczają Twoje oczekiwania i podążają za dynamicznym rynkiem.",
+      "Stosuję narzędzia, które dają Ci przewagę nad konkurencją. Moje projekty są zawsze aktualne i gotowe na zmiany, co pozwala na dynamiczny wzrost Twojego biznesu.",
     variant: "tertiary",
   },
   {
     stepNumber: 4,
-    title: "Solidność Kodu i Skalowalność",
+    title: "Czysty kod i skalowalność",
     description:
-      "Stawiam na solidną strukturę kodu, która gwarantuje nie tylko płynne działanie strony, ale także łatwą skalowalność i możliwość dalszego, efektywnego rozwoju bez utraty wydajności.",
+      "Buduję solidny fundament, który gwarantuje płynne działanie strony. Dzięki czystej strukturze, Twój serwis może rosnąć bez żadnej utraty swojej wydajności.",
     variant: "quaternary",
   },
 ] as const;

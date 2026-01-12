@@ -8,27 +8,27 @@ export interface OfferDataLargeItem {
 
 export const offerDataLarge: OfferDataLargeItem[] = [
   {
-    title: "Strony Internetowe Skoncentrowane na Wyniku",
+    title: "Skuteczne strony internetowe",
     description:
-      "Tworzę witryny, które nie tylko **wyglądają świetnie**, ale są strategicznie zaprojektowane, aby **działać doskonale** – zoptymalizowane pod kątem szybkiej konwersji i intuicyjnej obsługi.",
+      "Projektuję witryny, które nie tylko świetnie wyglądają, ale przede wszystkim zarabiają. Każdy element planuję tak, aby ułatwić Twoim klientom kontakt i zakup.",
     icon: Layout,
   },
   {
-    title: "Profesjonalne Projektowanie Wizualne (UI/UX)",
+    title: "Intuicyjny design UI/UX",
     description:
-      "Zajmuję się projektowaniem każdego detalu, dbając, by Twoja strona była **estetyczna, funkcjonalna i przyjazna** dla użytkowników. Zadbaj o to, by przyciągała uwagę od pierwszego wejrzenia.",
+      "Dbam o to, by korzystanie z Twojej strony było czystą przyjemnością. Tworzę estetyczne i proste w obsłudze interfejsy, w których każdy użytkownik od razu się odnajdzie.",
     icon: Palette,
   },
   {
-    title: "Spójny Branding i Identyfikacja Wizualna",
+    title: "Wyrazisty wizerunek marki",
     description:
-      "Buduj **zaufanie i lojalność** klientów. Oferuję wsparcie w kreowaniu spójnego i przemyślanego **brandingu**, który odzwierciedla wartości i osobowość Twojego biznesu.",
+      "Pomagam zbudować zaufanie dzięki spójnej identyfikacji wizualnej. Tworzę profesjonalny branding, który wyróżni Twój biznes na tle konkurencji i zapadnie w pamięć.",
     icon: Zap,
   },
   {
-    title: "Strategiczne Konsultacje Projektowe",
+    title: "Wsparcie i konsultacje",
     description:
-      "Potrzebujesz pewności co do designu lub **strategii wizualnej**? Chętnie podzielę się wiedzą i doświadczeniem, aby wspólnie znaleźć **najlepsze i najbardziej efektywne rozwiązania** dla Twojego projektu.",
+      "Nie musisz znać się na wszystkim. Dzielę się wiedzą i wspólnie wybieramy rozwiązania, które są najbardziej opłacalne dla Twojego projektu na każdym jego etapie.",
     icon: Handshake,
   },
 ];
