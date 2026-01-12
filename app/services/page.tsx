@@ -1,6 +1,7 @@
 import { ServicesExplorer } from "@/components/offer/ServicesExplorer/ServicesExplorer";
 import { ButtonLink } from "@/components/shared/ButtonLink/ButtonLink";
 import { HeadlineGroup } from "@/components/shared/HeadlineGroup/HeadlineGroup";
+import { Pricing } from "@/components/offer/Pricing/Pricing";
 
 export default function ServicesPage() {
   return (
@@ -23,6 +24,10 @@ export default function ServicesPage() {
 
       <div id="#services-box" className="mt-16">
         <ServicesExplorer />
+      </div>
+
+      <div>
+        <Pricing />
       </div>
     </div>
   );
