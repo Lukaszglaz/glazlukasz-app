@@ -17,15 +17,15 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Glazlukasz.pl - Tworzenie Stron Internetowych i Aplikacji",
   description:
-    "Profesjonalne usługi tworzenia stron internetowych, pozycjonowania SEO, hostingu i aplikacji internetowych.",
+    "Profesjonalne usługi tworzenia stron internetowych, aplikacji webowych, pozycjonowania SEO oraz oprawy graficznej. Skontaktuj się ze mną już dziś!",
 };
 
 const headerProps = {
   navItems: [
     { id: 1, label: "Strona Główna", href: "/" },
-    { id: 2, label: "Usługi", href: "/services" },
-    { id: 3, label: "Realizacje", href: "/realizacje" },
     { id: 4, label: "O Mnie", href: "/o-mnie" },
+    { id: 3, label: "Realizacje", href: "/realizacje" },
+    { id: 2, label: "Usługi", href: "/services" },
     { id: 5, label: "Kontakt", href: "/contact" },
   ] as NavItem[],
   logoSrc: logoFullWhite,
@@ -35,25 +35,27 @@ const headerProps = {
 
 const footerProps = {
   contact: {
-    phone: "+48 123 456 789",
+    phone: "+48 504 527 956",
     email: "kontakt@glazlukasz.pl",
     description:
-      "Skontaktuj się z nami w celu omówienia Twoich potrzeb związanych z tworzeniem stron internetowych i aplikacji.",
+      "Skontaktuj się ze mną w celu omówienia Twoich potrzeb związanych z tworzeniem stron internetowych i aplikacji.",
   },
   offerLinks: [
-    { label: "Strony WWW", href: "/services?service=strony-www" },
+    { label: "Strony Wizytówki", href: "/services?service=strony-www" },
+    { label: "Sklepy Internetowe", href: "/services?service=sklepy-online" },
+    { label: "Aplikacje Webowe", href: "/services?service=aplikacje" },
     { label: "Pozycjonowanie SEO", href: "/services?service=seo" },
-    { label: "Aplikacje Internetowe", href: "/services?service=aplikacje" },
-    { label: "Hosting i Domeny", href: "/services?service=hosting" },
     { label: "Oprawa graficzna", href: "/services?service=grafika" },
-    { label: "Wsparcie techniczne", href: "/services?service=wsparcie" },
+    { label: "Hosting i Domeny", href: "/services?service=hosting" },
   ],
   clientLinks: [
-    { label: "Polityka prywatności", href: "/polityka-prywatnosci" },
-    { label: "Polityka cookies", href: "/polityka-cookies" },
     { label: "Regulamin serwisu", href: "/regulamin" },
+    { label: "Polityka prywatności", href: "/polityka-prywatnosci" },
     { label: "Obowiązek informacyjny RODO", href: "/rodo" },
+    { label: "Polityka cookies", href: "/polityka-cookies" },
     { label: "Jak wyłączyć pliki cookie", href: "/cookies-instrukcja" },
+    { label: "Odstąpienie od umowy", href: "/odstapienie-od-umowy" },
+    { label: "Reklamacje i zwroty", href: "/reklamacje-i-zwroty" },
   ],
   socialMedia: [
     { name: "Facebook", href: "https://facebook.com", icon: Facebook },

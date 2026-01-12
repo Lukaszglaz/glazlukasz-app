@@ -16,8 +16,8 @@ export default function Home() {
     <div className="xl:max-w-8xl mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div>
         <HeadlineGroup
-          header="Stworzę stronę internetową dla Ciebie!"
-          description="Specjalizuję się w tworzeniu nowoczesnych stron WWW i aplikacji. Zapewniam kompleksowe wsparcie, od strategii SEO po pełną obsługę techniczną, aby Twój projekt odniósł sukces."
+          header="Buduję strony i aplikacje, które uwalniają Twój czas i wyróżniają Twój biznes."
+          description="Wiem, że technologia potrafi przytłoczyć. Dlatego biorę Twój pomysł i zmieniam go w gotową stronę, pilnując każdego szczegółu. Ty dajesz wizję, ja przejmuję całą resztę. Bez kopiowania od innych i bez zbędnego stresu."
           className="mt-24"
         />
         <div className="ml-4">
@@ -32,7 +32,7 @@ export default function Home() {
 
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <h2 className="mb-12 text-center text-3xl font-extrabold md:text-3xl">
-          Co oferuję
+          Moje wsparcie dla Twojego biznesu
         </h2>
         <div className="grid grid-cols-1 justify-items-center gap-8 md:grid-cols-3">
           {offerData.map((offer, index) => (
@@ -49,8 +49,8 @@ export default function Home() {
 
       <div>
         <HeadlineGroup
-          header="Wyróżnij Swój Biznes. Zaprojektujmy Sukces Online."
-          description="Tworzę nowoczesne strony i aplikacje, które nie tylko przyciągają wzrok, ale przede wszystkim generują wyniki. Zainspirujmy Twoich klientów i przekształćmy ich w lojalne grono odbiorców."
+          header="Strony, które pracują na Twój sukces."
+          description="Łączę nowoczesny design z konkretnymi wynikami. Tworzę narzędzia, które przyciągają klientów i pozwalają Ci skupić się na prowadzeniu biznesu, podczas gdy technologia działa dla Ciebie."
         />
       </div>
 
@@ -70,8 +70,8 @@ export default function Home() {
 
       <div>
         <HeadlineGroup
-          header="Gwarantowane Korzyści: Konkretne Rezultaty, Trwały Wzrost."
-          description="Od pierwszego kontaktu koncentruję się wyłącznie na Twoich celach biznesowych. Otrzymujesz efektywne strategie i kompletne wsparcie online: od profesjonalnego projektu strony, przez wdrożenie, po opiekę techniczną. Twój rozwój jest moim priorytetem."
+          header="Konkretne korzyści dla Twojego biznesu."
+          description="Skupiam się na Twoich celach biznesowych, dostarczając gotowe i działające rozwiązania. Od pierwszego szkicu po opiekę techniczną – dbam o wszystko, byś Ty mógł zająć się prowadzeniem biznesu."
         />
       </div>
 
@@ -94,7 +94,7 @@ export default function Home() {
         <ContactCTA
           title={"Masz Pytania? Zróbmy Pierwszy Krok!"}
           description={
-            "Zacznijmy od bezpłatnej konsultacji. Opisz swój projekt, a ja wskażę najbardziej efektywne rozwiązania. Otrzymujesz pewność, że projekt będzie dopasowany do Twoich celów biznesowych."
+            "Zacznijmy od krótkiej konsultacji. Opisz, czego potrzebujesz, a ja podpowiem Ci, jak najlepiej podejść do realizacji. Zyskasz jasny plan i pewność, że technologia będzie pracować na Twoje cele biznesowe."
           }
           buttonLabel={"Omówmy Twój Projekt"}
         />
@@ -102,8 +102,8 @@ export default function Home() {
 
       <div className="mt-20">
         <HeadlineGroup
-          header="Zobacz, Jak Rozwijam Biznesy. Moje Najnowsze Projekty."
-          description="Przejrzyj wybrane projekty, które przyniosły klientom konkretne i mierzalne rezultaty. To praktyczne przykłady tego, jak efektywny design i solidne wdrożenie mogą podnieść wartość Twojej marki."
+          header="Spójrz na moje ostatnie realizacje"
+          description="Zobacz realizacje, które przyniosły moim klientom faktyczne rezultaty. To praktyczne przykłady tego, jak przemyślany design i solidna technologia podnoszą realną wartość Twojego biznesu."
         />
       </div>
 
@@ -125,7 +125,7 @@ export default function Home() {
       <div>
         <HeadlineGroup
           header=" Proces Tworzenia Stron i Aplikacji Skrojony na Miarę Sukcesu"
-          description="Odkryj iteracyjny proces, który zamienia wizję w funkcjonalny sukces. Łączymy precyzyjną analizę potrzeb użytkowników z najwyższą jakością designu, aby dostarczyć cyfrowe doświadczenia, które angażują, konwertują i inspirują do działania."
+          description="Przekonaj się, jak krok po kroku zamieniam Twoją wizję w gotowy produkt. Łączę analizę potrzeb z nowoczesnym designem, aby dostarczyć narzędzia, które realnie angażują Twoich klientów."
         />
       </div>
 
@@ -147,8 +147,8 @@ export default function Home() {
 
       <div className="mt-10">
         <HeadlineGroup
-          header="Skontaktuj się ze mną!"
-          description="Masz pytania lub chcesz omówić swój projekt? Skontaktuj się ze mną, a chętnie pomogę Ci w realizacji Twoich celów online."
+          header="Porozmawiajmy o Twoim projekcie."
+          description="Masz pytania lub chcesz omówić współpracę? Napisz do mnie, a chętnie pomogę Ci dobrać rozwiązania, które najlepiej zrealizują Twoje cele biznesowe."
         />
       </div>
 
