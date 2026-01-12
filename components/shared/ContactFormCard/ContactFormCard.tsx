@@ -13,13 +13,15 @@ import { InputBase } from "@/components/shared/InputBase/InputBase";
 const CHAR_LIMIT = 500;
 
 const AVAILABLE_SERVICES = [
-  "Strony WWW",
+  "Strony Wizytówki",
+  "Sklepy Internetowe",
+  "Aplikacje Webowe",
   "Pozycjonowanie SEO",
-  "Hosting i Domeny",
-  "Aplikacje Internetowe",
-  "Bazy danych i e-mailing",
-  "Oprawa graficzna",
-  "Wsparcie techniczne online",
+  "Hosting i Domena",
+  "Wsparcie i Opieka",
+  "Oprawa Graficzna",
+  "Copywriting",
+  "Analityka i Dane",
 ];
 
 interface ContactFormProps {
@@ -107,7 +109,7 @@ export const ContactFormCard = ({
       {showSideContent && (
         <div className="flex flex-col space-y-3">
           <h2 className="text-color-text-primary text-xl font-extrabold">
-            Kontakt
+            Napisz bezpośrednio
           </h2>
           <p className="text-color-text-secondary text-xs">
             Email:{" "}
@@ -140,12 +142,14 @@ export const ContactFormCard = ({
               label="Imię"
               value={formData.imie}
               onChange={handleChange}
+              required
             />
             <InputBase
               id="nazwisko"
               label="Nazwisko"
               value={formData.nazwisko}
               onChange={handleChange}
+              required
             />
           </div>
           <InputBase
@@ -154,6 +158,7 @@ export const ContactFormCard = ({
             type="email"
             value={formData.email}
             onChange={handleChange}
+            required
           />
 
           {showServices && (
@@ -212,6 +217,7 @@ export const ContactFormCard = ({
             <InputBase
               id="message"
               label="Treść"
+              required
               type="textarea"
               value={formData.message}
               onChange={handleChange}
