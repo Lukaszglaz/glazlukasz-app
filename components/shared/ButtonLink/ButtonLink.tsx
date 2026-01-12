@@ -9,9 +9,9 @@ const variantStyles: Record<ButtonVariant, string> = {
   primary:
     "bg-accent text-white hover:bg-accent-hover active:bg-accent-hover/90 focus:outline-2 focus:outline-offset-2 focus:outline-tertiary active:bg-tertiary",
   secondary:
-    "bg-surface text-text-primary border border-accent hover:bg-text-secondary/20 active:bg-surface/80 focus:outline-2 focus:outline-offset-4 focus:outline-tertiary active:bg-tertiary",
+    "bg-surface border border-accent hover:bg-text-secondary/20 active:bg-surface/80 focus:outline-2 focus:outline-offset-4 focus:outline-tertiary active:bg-tertiary",
   clean:
-    "bg-transparent text-text-primary hover:text-accent active:text-accent-hover focus:outline-2 focus:outline-offset-2 focus:outline-tertiary active:bg-tertiary/30",
+    "bg-transparent focus:outline-2 focus:outline-offset-2 focus:outline-tertiary active:bg-tertiary/30",
   destructive:
     "bg-destructive text-white hover:bg-destructive-hover focus:outline-2 focus:outline-offset-2 focus:outline-destructive active:bg-destructive-hover/80",
 };
@@ -43,8 +43,6 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
   href,
   ...rest
 }) => {
-  const isNavVariant = variant === "clean" || variant === "secondary";
-
   return (
     <Link
       href={href}
@@ -52,6 +50,10 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
         baseStyles,
         sizeStyles[size],
         variantStyles[variant],
+        isActive
+          ? "text-accent"
+          : (variant === "clean" || variant === "secondary") &&
+              "text-text-primary hover:text-accent",
         fullWidth && "w-full",
         className,
       )}
