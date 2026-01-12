@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import React, { ComponentPropsWithoutRef } from "react";
-import { Button } from "../Button/Button";
 import { clsx } from "clsx";
+import { ButtonLink } from "../ButtonLink/ButtonLink";
 
 type ContactCTAProps = {
   title: string;
@@ -28,10 +28,10 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({
         {title}
       </h2>
       <p className={paragraphClasses}>{description}</p>
-      <Button variant="primary" className="m-6">
-        <a href="mailto:kontakt@glazlukasz.pl">{buttonLabel}</a>
+      <ButtonLink href="/contact" variant="primary" className="m-6">
+        {buttonLabel}
         <ArrowRight className="mx-1 h-5 w-5" />
-      </Button>
+      </ButtonLink>
     </div>
   );
 };

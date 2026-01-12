@@ -10,31 +10,31 @@ export const processData: ProcessDataItem[] = [
     stepNumber: 1,
     title: "Strategia i Weryfikacja Koncepcji",
     description:
-      "Rozpoczynamy od głębokiej analizy celu i weryfikacji pomysłów. Odkrywam unikalne perspektywy i podejścia, które strategicznie wzmocnią Twój projekt na rynku.",
+      "Zaczynamy od głębokiej analizy Twoich celów biznesowych oraz potrzeb przyszłych użytkowników. Weryfikuję pomysły i szukam unikalnych rozwiązań, które pozwolą Twojemu projektowi skutecznie wybić się na tle konkurencji.",
     variant: "primary",
     heightVariant: "mediumMax",
   },
   {
     stepNumber: 2,
-    title: "Projektowanie UI/UX i Wyróżnianie Marki",
+    title: "Projektowanie UI/UX i Wizerunku",
     description:
-      "Ożywiam Twoją wizję przy pomocy kreatywnego designu i wizualnej narracji. Tworzę dzieła, które nie tylko oddają wartości Twojej marki, ale angażują odbiorców i wybijają się na tle konkurencji.",
+      "Ożywiam Twoją wizję za pomocą nowoczesnego designu i przemyślanej narracji wizualnej. Tworzę interfejsy, które są nie tylko estetyczne, ale przede wszystkim intuicyjne, budując zaufanie i lojalność Twoich klientów.",
     variant: "secondary",
     heightVariant: "medium",
   },
   {
     stepNumber: 3,
-    title: "Skalowalne Wdrożenie i Solidność Kodu",
+    title: "Solidne Wdrożenie i Czysty Kod",
     description:
-      "Wykorzystuję najnowsze technologie do przeniesienia projektu na nowy poziom. Zapewniam zaawansowane narzędzia, tworząc interaktywne efekty i wydajną, skalowalną strukturę kodu.",
+      "Przenoszę projekt w świat najnowszych technologii, dbając o najwyższą wydajność i bezpieczeństwo. Tworzę solidną, skalowalną strukturę kodu, która gwarantuje błyskawiczne działanie strony na każdym urządzeniu.",
     variant: "tertiary",
     heightVariant: "low",
   },
   {
     stepNumber: 4,
-    title: "Optymalizacja, Wdrożenie i Stałe Wsparcie",
+    title: "Optymalizacja i Stałe Wsparcie",
     description:
-      "Dokładnie analizuję i dopasowuję projekt do Twoich oczekiwań. Otrzymujesz gotową stronę WWW/aplikację, a także kompleksowe wsparcie techniczne i opiekę po wdrożeniu.",
+      "Dostarczam gotowy produkt, który jest w pełni zoptymalizowany pod kątem konwersji i wyników. Po wdrożeniu nie zostajesz sam – oferuję kompleksową opiekę techniczną i pomoc w dalszym, dynamicznym rozwoju projektu.",
     variant: "quaternary",
     heightVariant: "veryLow",
   },

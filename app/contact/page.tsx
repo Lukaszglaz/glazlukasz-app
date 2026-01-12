@@ -55,11 +55,11 @@ export default function ContactPage() {
           className="mt-24"
         />
         <div className="ml-4">
-          <ButtonLink variant="primary" href={"#"} className="mr-4">
+          <ButtonLink variant="primary" href={"#contact-form"} className="mr-4">
             Napisz do mnie!
           </ButtonLink>
-          <ButtonLink variant="clean" href={"/contact"}>
-            Zobacz moją ofertę!
+          <ButtonLink variant="clean" href={"/services"}>
+            Zobacz pełną ofertę!
           </ButtonLink>
         </div>
       </div>
@@ -83,7 +83,10 @@ export default function ContactPage() {
       </div>
 
       <div className="mt-8 grid grid-cols-1 items-stretch gap-12 lg:grid-cols-2">
-        <div className="bg-bg-surface border-color-border rounded-2xl border p-8 shadow-sm">
+        <div
+          id="contact-form"
+          className="bg-bg-surface border-color-border scroll-mt-32 rounded-2xl border p-8 shadow-sm"
+        >
           <ContactFormCard
             showServices={true}
             showTerms={true}
