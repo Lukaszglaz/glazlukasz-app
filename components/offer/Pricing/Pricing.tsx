@@ -12,69 +12,7 @@ import {
 } from "lucide-react";
 import clsx from "clsx";
 import { ButtonLink } from "@/components/shared/ButtonLink/ButtonLink";
-
-const PLANS = [
-  {
-    id: "start",
-    title: "Na dobry początek",
-    priceMonthly: 79,
-    priceYearly: 790,
-    description:
-      "Profesjonalna wizytówka Twojej firmy z pełnym wsparciem technicznym.",
-    features: [
-      "Strona One-Page",
-      "Hosting NVMe (Smarthost)",
-      "Certyfikat SSL",
-      "1 skrzynka e-mail",
-      "Podstawowe SEO",
-    ],
-  },
-  {
-    id: "fundament",
-    title: "Solidny fundament",
-    priceMonthly: 149,
-    priceYearly: 1490,
-    description:
-      "Rozbudowana witryna i zaawansowana analityka dla rosnącego biznesu.",
-    features: [
-      "Strona do 5 podstron",
-      "Hosting & SSL",
-      "Firmowy Copywriting",
-      "Analityka GA4",
-      "Opieka techniczna",
-    ],
-    isPopular: true,
-  },
-  {
-    id: "wsparcie",
-    title: "Pełne wsparcie",
-    priceMonthly: 249,
-    priceYearly: 2490,
-    description:
-      "Kompleksowe rozwiązanie e-commerce lub dedykowana aplikacja webowa.",
-    features: [
-      "Sklep lub App",
-      "Priorytetowe wsparcie",
-      "Pełne SEO & Raporty",
-      "Integracje API",
-      "Automatyzacje",
-    ],
-  },
-  {
-    id: "custom",
-    title: "Indywidualny",
-    priceMonthly: null,
-    priceYearly: null,
-    description:
-      "Projekty niestandardowe wymagające dedykowanych rozwiązań IT.",
-    features: [
-      "Systemy dedykowane",
-      "Unikalny Design UI/UX",
-      "Konsultacje 1-na-1",
-      "Dowolna skala",
-    ],
-  },
-];
+import { PLANS } from "@/app/data/services/pricing";
 
 export const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
@@ -158,7 +96,6 @@ export const Pricing = () => {
       </div>
 
       <div className="flex flex-col overflow-hidden rounded-[2.5rem] border border-border bg-bg-card shadow-2xl lg:flex-row">
-        {/* Lewa kolumna: Lista Pakietów */}
         <div className="bg-bg-secondary flex flex-col gap-4 border-border p-6 lg:w-1/3 lg:border-r">
           <div className="mb-2 flex items-center justify-between px-4">
             <p className="text-color-text-secondary text-xs font-bold tracking-widest uppercase">
@@ -253,8 +190,6 @@ export const Pricing = () => {
             </div>
           </div>
         </div>
-
-        {/* Prawa kolumna: Szczegóły Wybranego Pakietu */}
         <div
           ref={detailsRef}
           className="relative flex flex-col p-8 lg:w-2/3 lg:p-14"
