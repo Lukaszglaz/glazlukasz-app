@@ -12,14 +12,14 @@ import {
 } from "lucide-react";
 import clsx from "clsx";
 import { ButtonLink } from "@/components/shared/ButtonLink/ButtonLink";
-import { PLANS } from "@/app/data/services/pricing";
+import { plans } from "@/app/data/services/pricingData";
 
 export const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
-  const [activePlan, setActivePlan] = useState(PLANS[1]);
+  const [activePlan, setActivePlan] = useState(plans[1]);
   const detailsRef = useRef<HTMLDivElement>(null);
 
-  const handlePlanChange = (plan: (typeof PLANS)[0]) => {
+  const handlePlanChange = (plan: (typeof plans)[0]) => {
     setActivePlan(plan);
     if (window.innerWidth < 1024 && detailsRef.current) {
       const headerOffset = 100;
@@ -107,7 +107,7 @@ export const Pricing = () => {
           </div>
 
           <div className="flex flex-col gap-3">
-            {PLANS.map((plan) => {
+            {plans.map((plan) => {
               const isSelected = activePlan.id === plan.id;
               return (
                 <button

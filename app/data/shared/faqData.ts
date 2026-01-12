@@ -1,9 +1,9 @@
-export interface faqSectionItem {
+export interface FaqSectionItem {
   question: string;
   answer: string;
 }
 
-export const faqSection: faqSectionItem[] = [
+export const faqSection: FaqSectionItem[] = [
   {
     question: "Jak wygląda model współpracy abonamentowej?",
     answer:

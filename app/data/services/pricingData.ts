@@ -8,7 +8,7 @@ export interface PlanItem {
   isPopular?: boolean;
 }
 
-export const PLANS: PlanItem[] = [
+export const plans: PlanItem[] = [
   {
     id: "start",
     title: "Na dobry początek",

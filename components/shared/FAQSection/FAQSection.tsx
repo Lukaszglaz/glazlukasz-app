@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import clsx from "clsx";
-import { faqSection } from "@/app/data/shared/faqSection";
+import { faqSection } from "@/app/data/shared/faqData";
 
 export const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
