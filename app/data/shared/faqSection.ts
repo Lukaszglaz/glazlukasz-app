@@ -5,54 +5,48 @@ export interface faqSectionItem {
 
 export const faqSection: faqSectionItem[] = [
   {
-    question: "Od czego zaczynamy proces tworzenia Twojej nowej strony?",
+    question: "Jak wygląda model współpracy abonamentowej?",
     answer:
-      "Naszą współpracę rozpoczynamy od wnikliwej analizy Twoich potrzeb i celów biznesowych. Następnie przygotowuję strategię, gromadzę niezbędne materiały oraz opracowuję makietę funkcjonalną, która stanowi fundament profesjonalnego projektu graficznego.",
+      "To proste: ja zajmuję się stroną, hostingiem i technicznym bezpieczeństwem, a Ty płacisz stałą, niską opłatę miesięczną. Dzięki temu nie musisz inwestować dużej kwoty na start, a Twoja witryna jest zawsze aktualna i pod moją opieką.",
   },
   {
-    question: "Czy muszę dostarczyć własne grafiki, czy zajmujesz się tym Ty?",
+    question: "Czy strona będzie działać szybko?",
     answer:
-      "Masz pełną dowolność – możesz przekazać mi własne materiały lub zdać się na moje wsparcie. W ramach usług wyszukuję i dobieram wysokiej jakości zasoby wizualne, które najlepiej oddadzą charakter Twojej marki i przyciągną uwagę odbiorców.",
+      "Tak. Wszystkie projekty utrzymuję na najszybszych dyskach NVMe z technologią LiteSpeed (Smarthost). To gwarantuje błyskawiczne ładowanie strony, co przekłada się na lepsze wrażenia użytkowników i wyższe pozycje w Google.",
   },
   {
-    question:
-      "Jak wygląda opieka nad projektem po jego oficjalnym zakończeniu?",
+    question: "Co się dzieje, gdy będę chciał zmienić coś na stronie?",
     answer:
-      "Moje wsparcie nie kończy się w momencie publikacji strony. Po zakończeniu prac możesz liczyć na uwzględnienie zmian zgodnie z naszymi ustaleniami. Zazwyczaj oferuję również dedykowaną opiekę techniczną, dbając o stabilne działanie Twojej witryny.",
+      "W ramach wybranego pakietu opieki technicznej, drobne zmiany w treściach czy zdjęciach wykonuję za Ciebie. Wystarczy jeden e-mail lub telefon – dbam o to, byś nie musiał sam tracić czasu na edycję kodu czy panelu.",
   },
   {
-    question:
-      "Czy istnieje możliwość rozliczenia ratalnego za wykonane usługi?",
+    question: "Czy zajmujesz się również tekstami i grafiką?",
     answer:
-      "Aktualnie preferuję standardowe formy płatności, jednak stale rozwijam swoją ofertę i nie wykluczam wprowadzenia systemu ratalnego w bliskiej przyszłości, aby jeszcze lepiej dopasować się do możliwości moich klientów.",
+      "Zdecydowanie tak. Oferuję kompleksowy copywriting oraz oprawę graficzną. Nie musisz szukać zewnętrznych firm – przygotuję dla Ciebie teksty sprzedażowe, logotyp oraz spójną identyfikację wizualną.",
   },
   {
-    question:
-      "Czy moja strona będzie zintegrowana z mediami społecznościowymi?",
+    question: "Jakie są korzyści z Twojej opieki nad SEO i Analityką?",
     answer:
-      "Zdecydowanie tak. Implementuję pełną integrację z wybranymi platformami społecznościowymi, co pozwala na płynną komunikację z użytkownikami, budowanie społeczności i skuteczne zwiększanie zasięgów Twojego biznesu.",
+      "Nie zostawiam Cię z samą stroną. Monitoruję ruch za pomocą Google Analytics 4 i optymalizuję witrynę pod wyszukiwarki. Raz w miesiącu dowiesz się, ilu klientów Cię odwiedziło i co możemy zrobić, by było ich jeszcze więcej.",
   },
   {
-    question:
-      "Czy otrzymam instrukcję, jak samodzielnie zarządzać treścią na stronie?",
+    question: "Czy mogę zrezygnować z subskrypcji?",
     answer:
-      "Tak, po sfinalizowaniu projektu otrzymasz ode mnie przejrzystą instrukcję obsługi. Dzięki niej będziesz mógł z łatwością samodzielnie aktualizować teksty czy zdjęcia, zachowując pełną kontrolę nad zawartością swojej witryny.",
+      "Tak, umowę możesz wypowiedzieć zgodnie z warunkami Twojego planu. Pamiętaj jednak, że w modelu abonamentowym opiekuję się Twoją stroną i hostingiem – po rezygnacji i rozliczeniu kosztów wdrożenia, strona może zostać przeniesiona na Twój własny serwer.",
   },
   {
-    question:
-      "Czy oferujesz kompleksową optymalizację pod kątem wyszukiwarek (SEO)?",
+    question: "Ile czasu trwa uruchomienie strony wizytówki?",
     answer:
-      "Obecnie intensywnie pracuję nad rozszerzeniem oferty o zaawansowane usługi SEO. Już wkrótce będę mógł zaproponować pełną optymalizację, która pomoże Twojej stronie zająć najwyższe pozycje w wynikach wyszukiwania.",
+      "Dzięki zoptymalizowanemu procesowi, prostą stronę wizytówkową jestem w stanie przygotować i uruchomić już w 7-14 dni roboczych od momentu otrzymania kompletu informacji.",
   },
   {
-    question: "Gdzie mogę zapoznać się z Twoimi dotychczasowymi realizacjami?",
+    question: "Czy otrzymam fakturę za usługi?",
     answer:
-      "Serdecznie zapraszam Cię do odwiedzenia sekcji portfolio. Znajdziesz tam moje wybrane projekty, które najlepiej prezentują moje umiejętności techniczne, zmysł estetyczny oraz różnorodność branż, dla których pracuję.",
+      "Tak, za każdą płatność (miesięczną lub roczną) wystawiam fakturę. Rozliczenia są przejrzyste, a koszty stałe pozwalają Ci łatwo zaplanować budżet Twojej firmy.",
   },
   {
-    question:
-      "Ile czasu zazwyczaj trwa realizacja profesjonalnej strony internetowej?",
+    question: "Do kogo należy strona po zakończeniu współpracy?",
     answer:
-      "Standardowy czas produkcji wynosi od 2 do 3 tygodni. Termin ten jest jednak elastyczny i zależy od stopnia złożoności projektu oraz szybkości przepływu informacji – zawsze dążę do tego, by dostarczyć gotowy produkt w możliwie najkrótszym czasie.",
+      "Strona jest tworzona dla Ciebie. Po okresie minimalnym (zazwyczaj 12 msc) lub po rozliczeniu kosztów wdrożenia, możesz wykupić stronę na własność i przenieść ją do dowolnego dostawcy, choć większość klientów zostaje ze mną ze względu na wygodę i szybkość serwerów Smarthost.",
   },
 ];
