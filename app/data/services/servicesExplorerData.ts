@@ -1,4 +1,4 @@
-export interface servicesDataItem {
+export interface ServicesDataItem {
   id: string;
   title: string;
   icon: string;
@@ -7,7 +7,7 @@ export interface servicesDataItem {
   features: string[];
 }
 
-export const servicesData: servicesDataItem[] = [
+export const servicesData: ServicesDataItem[] = [
   {
     id: "strony-www",
     title: "Strony Wizytówki",

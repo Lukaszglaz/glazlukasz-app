@@ -8,13 +8,13 @@ import {
   Zap,
 } from "lucide-react";
 
-export interface offerItem {
+export interface OfferItem {
   title: string;
   description: string;
   icon: LucideIcon;
 }
 
-export const offerData: offerItem[] = [
+export const offerData: OfferItem[] = [
   {
     title: "Szanuję Twój czas",
     description:

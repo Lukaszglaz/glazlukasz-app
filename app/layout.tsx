@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const headerProps = {
   navItems: [
     { id: 1, label: "Strona Główna", href: "/" },
-    { id: 4, label: "O Mnie", href: "/o-mnie" },
+    { id: 4, label: "O Mnie", href: "/about-me" },
     { id: 3, label: "Realizacje", href: "/realizacje" },
     { id: 2, label: "Usługi", href: "/services" },
     { id: 5, label: "Kontakt", href: "/contact" },
