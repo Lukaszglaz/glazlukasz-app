@@ -24,7 +24,7 @@ const headerProps = {
   navItems: [
     { id: 1, label: "Strona Główna", href: "/" },
     { id: 4, label: "O Mnie", href: "/about-me" },
-    { id: 3, label: "Realizacje", href: "/realizacje" },
+    { id: 3, label: "Realizacje", href: "/realizations" },
     { id: 2, label: "Usługi", href: "/services" },
     { id: 5, label: "Kontakt", href: "/contact" },
   ] as NavItem[],

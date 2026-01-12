@@ -60,7 +60,7 @@ export default function AboutMePage() {
 
           <div className="relative flex-1">
             <div className="relative z-10 overflow-hidden rounded-[3.5rem] border border-border bg-bg-card p-4 shadow-[0_0_50px_-12px_rgba(var(--accent-rgb),0.3)]">
-              <div className="from-bg-secondary flex aspect-[4/5] flex-col items-center justify-center rounded-[2.8rem] border border-border/50 bg-gradient-to-tr to-accent/5 p-8 text-center">
+              <div className="from-bg-secondary flex flex-col items-center justify-center rounded-[2.8rem] border border-border/50 to-accent/5 p-8 text-center">
                 <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-12 text-[12rem] font-black text-accent/5 select-none">
                   IT
                 </span>
