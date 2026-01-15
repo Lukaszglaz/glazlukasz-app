@@ -2,6 +2,7 @@ export interface PrivacyProcessingItem {
   title: string;
   desc: string;
   basis: string;
+  analyticsId?: string;
 }
 
 export const privacyProcessingData: PrivacyProcessingItem[] = [
@@ -24,5 +25,6 @@ export const privacyProcessingData: PrivacyProcessingItem[] = [
     title: "Analityka i statystyka",
     desc: "Monitorowanie ruchu w Serwisie za pomocą Google Analytics (ID: G-3ZG24K6KB2) w celu optymalizacji portfolio.",
     basis: "Art. 6 ust. 1 lit. a RODO (dobrowolna zgoda).",
+    analyticsId: "G-3ZG24K6KB2",
   },
 ];
