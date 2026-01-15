@@ -8,7 +8,7 @@ import {
   AlertOctagon,
   ArrowRight,
 } from "lucide-react";
-import { LegalWrapper } from "@/components/shared/LegalWrapper/LegalWrapper";
+import { LegalWrapper } from "@/components/shared/Legal/LegalWrapper/LegalWrapper";
 import { motion, AnimatePresence } from "framer-motion";
 import { browserInstructionsData } from "@/app/data/legal/howToDisabledCookies/browserInstructionsData";
 

@@ -2,17 +2,17 @@
 
 import { useState } from "react";
 import { Lock, AlertTriangle } from "lucide-react";
-import { LegalWrapper } from "@/components/shared/LegalWrapper/LegalWrapper";
+import { LegalWrapper } from "@/components/shared/Legal/LegalWrapper/LegalWrapper";
 
 import {
   withdrawalSteps,
   withdrawalFeatures,
   withdrawalSectionsData,
 } from "@/app/data/legal/withdrawals/withdrawalData";
-import { LegalStepsCards } from "@/components/shared/LegalStepsCards/LegalStepsCards";
-import { LegalCopySheet } from "@/components/shared/LegalCopySheet/LegalCopySheet";
-import { LegalFeaturesGrid } from "@/components/shared/LegalFeaturesGrid/LegalFeaturesGrid";
-import { LegalSideAlert } from "@/components/shared/LegalSideAlert/LegalSideAlert";
+import { LegalStepsCards } from "@/components/shared/Legal/LegalStepsCards/LegalStepsCards";
+import { LegalCopySheet } from "@/components/shared/Legal/LegalCopySheet/LegalCopySheet";
+import { LegalFeaturesGrid } from "@/components/shared/Legal/LegalFeaturesGrid/LegalFeaturesGrid";
+import { LegalSideAlert } from "@/components/shared/Legal/LegalSideAlert/LegalSideAlert";
 
 export default function WithdrawalPage() {
   const [copied, setCopied] = useState(false);

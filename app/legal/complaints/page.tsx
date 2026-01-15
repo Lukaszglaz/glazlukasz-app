@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import { ShieldCheck, Zap } from "lucide-react";
-import { LegalWrapper } from "@/components/shared/LegalWrapper/LegalWrapper";
+import { LegalWrapper } from "@/components/shared/Legal/LegalWrapper/LegalWrapper";
 import { complaintsLegalInfo } from "@/app/data/legal/complaints/complaintLabelData";
 import { complaint } from "@/app/data/legal/complaints/complaintData";
 import { complaintProcedureData } from "@/app/data/legal/complaints/complaintProcedureData";
-import { LegalStepsCards } from "@/components/shared/LegalStepsCards/LegalStepsCards";
-import { LegalCopySheet } from "@/components/shared/LegalCopySheet/LegalCopySheet";
-import { LegalFeaturesGrid } from "@/components/shared/LegalFeaturesGrid/LegalFeaturesGrid";
-import { LegalSideAlert } from "@/components/shared/LegalSideAlert/LegalSideAlert";
+import { LegalStepsCards } from "@/components/shared/Legal/LegalStepsCards/LegalStepsCards";
+import { LegalCopySheet } from "@/components/shared/Legal/LegalCopySheet/LegalCopySheet";
+import { LegalFeaturesGrid } from "@/components/shared/Legal/LegalFeaturesGrid/LegalFeaturesGrid";
+import { LegalSideAlert } from "@/components/shared/Legal/LegalSideAlert/LegalSideAlert";
 
 export default function ComplaintsPage() {
   const [copied, setCopied] = useState(false);

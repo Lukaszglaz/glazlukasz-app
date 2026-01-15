@@ -13,9 +13,9 @@ import {
   AlertCircle,
   ArrowRight,
 } from "lucide-react";
-import { LegalWrapper } from "@/components/shared/LegalWrapper/LegalWrapper";
-import { LegalSection } from "@/components/shared/LegalSection/LegalSection";
-import { LegalContactCard } from "@/components/shared/LegalContactCard/LegalContactCard";
+import { LegalWrapper } from "@/components/shared/Legal/LegalWrapper/LegalWrapper";
+import { LegalSection } from "@/components/shared/Legal/LegalSection/LegalSection";
+import { LegalContactCard } from "@/components/shared/Legal/LegalContactCard/LegalContactCard";
 
 import { relatedLinksData } from "@/app/data/legal/cookiesPolicy/relatedLinksData";
 import { gdprProcessingData } from "@/app/data/legal/gdpr/gdprProcessingData";

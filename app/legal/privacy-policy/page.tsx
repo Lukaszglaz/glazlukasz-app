@@ -9,10 +9,10 @@ import {
   Mail,
   Link as LinkIcon,
 } from "lucide-react";
-import { LegalWrapper } from "@/components/shared/LegalWrapper/LegalWrapper";
-import { LegalSection } from "@/components/shared/LegalSection/LegalSection";
+import { LegalWrapper } from "@/components/shared/Legal/LegalWrapper/LegalWrapper";
+import { LegalSection } from "@/components/shared/Legal/LegalSection/LegalSection";
 import { privacyProcessingData } from "@/app/data/legal/privacyPolicy/privacyProcessingData";
-import { LegalContactCard } from "@/components/shared/LegalContactCard/LegalContactCard";
+import { LegalContactCard } from "@/components/shared/Legal/LegalContactCard/LegalContactCard";
 
 export default function PrivacyPolicyPage() {
   return (

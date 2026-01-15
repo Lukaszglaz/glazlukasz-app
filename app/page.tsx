@@ -10,7 +10,7 @@ import { offerDataLarge } from "./data/homePage/offerDataLarge";
 import { benefitData } from "./data/homePage/benefitData";
 import { showcaseData } from "./data/homePage/showcaseData";
 import { processData } from "./data/homePage/processData";
-import { LegalWrapper } from "@/components/shared/LegalWrapper/LegalWrapper";
+import { LegalWrapper } from "@/components/shared/Legal/LegalWrapper/LegalWrapper";
 
 export default function Home() {
   return (

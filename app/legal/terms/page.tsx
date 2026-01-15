@@ -9,7 +9,7 @@ import {
   UserCheck,
   Lock,
 } from "lucide-react";
-import { LegalWrapper } from "@/components/shared/LegalWrapper/LegalWrapper";
+import { LegalWrapper } from "@/components/shared/Legal/LegalWrapper/LegalWrapper";
 
 import { termsStatusData } from "@/app/data/legal/terms/termsStatusData";
 import { termsInfraData } from "@/app/data/legal/terms/termsInfraData";
