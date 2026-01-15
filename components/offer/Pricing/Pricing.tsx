@@ -233,7 +233,7 @@ export const Pricing = () => {
                 {activePlan.features.map((feature, idx) => (
                   <div
                     key={idx}
-                    className="bg-bg-secondary flex items-center gap-3 rounded-xl border border-border p-4"
+                    className="bg-bg-secondary flex items-center gap-3 rounded-xl border border-border p-4 hover:border-accent/30"
                   >
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 text-accent">
                       <Check className="h-4 w-4" />
@@ -247,7 +247,7 @@ export const Pricing = () => {
 
               <div className="mt-auto pt-8 lg:pt-12">
                 <ButtonLink
-                  href="#contact-form"
+                  href="/contact"
                   variant="primary"
                   className={clsx(
                     "group flex w-full items-center justify-center gap-2 py-4 text-base font-black uppercase shadow-xl transition-all lg:gap-3 lg:py-6 lg:text-lg",

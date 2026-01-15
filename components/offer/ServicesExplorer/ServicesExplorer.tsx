@@ -1,13 +1,7 @@
 "use client";
 
 import * as Icons from "lucide-react";
-import {
-  LucideIcon,
-  X,
-  CheckCircle2,
-  ArrowUpRight,
-  MousePointerClick,
-} from "lucide-react";
+import { LucideIcon, X, CheckCircle2, ArrowUpRight } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { servicesData } from "@/app/data/services/servicesExplorerData";
