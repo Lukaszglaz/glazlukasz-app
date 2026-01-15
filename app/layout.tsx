@@ -49,13 +49,16 @@ const footerProps = {
     { label: "Hosting i Domeny", href: "/services?service=hosting" },
   ],
   clientLinks: [
-    { label: "Regulamin serwisu", href: "/regulamin" },
-    { label: "Polityka prywatności", href: "/polityka-prywatnosci" },
-    { label: "Obowiązek informacyjny RODO", href: "/rodo" },
-    { label: "Polityka cookies", href: "/polityka-cookies" },
-    { label: "Jak wyłączyć pliki cookie", href: "/cookies-instrukcja" },
-    { label: "Odstąpienie od umowy", href: "/odstapienie-od-umowy" },
-    { label: "Reklamacje i zwroty", href: "/reklamacje-i-zwroty" },
+    { label: "Regulamin serwisu", href: "/legal/terms" },
+    { label: "Polityka prywatności", href: "/legal/privacy-policy" },
+    { label: "Obowiązek informacyjny RODO", href: "/legal/gdpr" },
+    { label: "Polityka cookies", href: "/legal/cookies-policy" },
+    {
+      label: "Jak wyłączyć pliki cookie",
+      href: "/legal/how-to-disabled-cookies",
+    },
+    { label: "Odstąpienie od umowy", href: "/legal/withdrawals" },
+    { label: "Reklamacje i zwroty", href: "/legal/complaints" },
   ],
   socialMedia: [
     { name: "Facebook", href: "https://facebook.com", icon: Facebook },
