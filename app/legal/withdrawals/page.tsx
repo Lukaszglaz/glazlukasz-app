@@ -12,6 +12,7 @@ import {
 import { LegalStepsCards } from "@/components/shared/LegalStepsCards/LegalStepsCards";
 import { LegalCopySheet } from "@/components/shared/LegalCopySheet/LegalCopySheet";
 import { LegalFeaturesGrid } from "@/components/shared/LegalFeaturesGrid/LegalFeaturesGrid";
+import { LegalSideAlert } from "@/components/shared/LegalSideAlert/LegalSideAlert";
 
 export default function WithdrawalPage() {
   const [copied, setCopied] = useState(false);
@@ -46,26 +47,16 @@ export default function WithdrawalPage() {
               />
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-[2.5rem] border border-destructive/20 bg-destructive/5 p-10 lg:col-span-5">
-            <div className="relative z-10">
-              <h4 className="mb-6 flex items-center gap-2 text-xs font-black tracking-[0.3em] text-destructive uppercase">
-                <AlertTriangle size={14} /> Ważne Uwagi
-              </h4>
-              <ul className="space-y-4 text-[13px] text-text-secondary opacity-70">
-                <li>
-                  • Rezygnacja nie obejmuje zakupionych licencji bezzwrotnych.
-                </li>
-                <li>
-                  • Potrącane są koszty pracy wykonanej do chwili zgłoszenia.
-                </li>
-                <li>• Brak akceptacji kosztów uniemożliwia drogę polubowną.</li>
-              </ul>
-            </div>
-            <Lock
-              className="absolute -right-10 -bottom-10 text-destructive opacity-[0.03]"
-              size={200}
-            />
-          </div>
+          <LegalSideAlert
+            icon={AlertTriangle}
+            title="Ważne uwagi"
+            items={[
+              "• Odstąpienie nie przysługuje po pełnym wykonaniu usługi.",
+              "• Produkty cyfrowe 'custom' nie podlegają zwrotom.",
+              "• Weryfikacja tożsamości klienta jest obowiązkowa.",
+            ]}
+            bgIcon={Lock}
+          />
         </section>
         <LegalCopySheet
           title="Arkusz Danych"

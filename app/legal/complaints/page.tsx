@@ -9,6 +9,7 @@ import { complaintProcedureData } from "@/app/data/legal/complaints/complaintPro
 import { LegalStepsCards } from "@/components/shared/LegalStepsCards/LegalStepsCards";
 import { LegalCopySheet } from "@/components/shared/LegalCopySheet/LegalCopySheet";
 import { LegalFeaturesGrid } from "@/components/shared/LegalFeaturesGrid/LegalFeaturesGrid";
+import { LegalSideAlert } from "@/components/shared/LegalSideAlert/LegalSideAlert";
 
 export default function ComplaintsPage() {
   const [copied, setCopied] = useState(false);
@@ -43,24 +44,16 @@ export default function ComplaintsPage() {
               />
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-[2.5rem] border border-destructive/20 bg-destructive/5 p-10 lg:col-span-5">
-            <div className="relative z-10">
-              <h4 className="mb-6 flex items-center gap-2 text-xs font-black tracking-[0.3em] text-destructive uppercase">
-                <Zap size={14} /> Wyłączenia
-              </h4>
-              <ul className="space-y-4 text-[13px] text-text-secondary opacity-70">
-                <li>• Ingerencja osób trzecich w kod źródłowy / API.</li>
-                <li>
-                  • Błędy wynikające z braku aktualizacji po stronie klienta.
-                </li>
-                <li>• Nieprawidłowa konfiguracja środowiska hostingowego.</li>
-              </ul>
-            </div>
-            <ShieldCheck
-              className="absolute -right-10 -bottom-10 text-destructive opacity-[0.03]"
-              size={200}
-            />
-          </div>
+          <LegalSideAlert
+            icon={Zap}
+            title="Wyłączenia"
+            items={[
+              "• Ingerencja osób trzecich w kod źródłowy / API.",
+              "• Błędy wynikające z braku aktualizacji po stronie klienta.",
+              "• Nieprawidłowa konfiguracja środowiska hostingowego.",
+            ]}
+            bgIcon={ShieldCheck}
+          />
         </section>
         <LegalCopySheet
           title="Arkusz Danych"
