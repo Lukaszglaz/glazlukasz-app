@@ -9,6 +9,7 @@ import {
   withdrawalFeatures,
   withdrawalSectionsData,
 } from "@/app/data/legal/withdrawals/withdrawalData";
+import { LegalStepsCards } from "@/components/shared/LegalStepsCards/LegalStepsCards";
 
 export default function WithdrawalPage() {
   const [copied, setCopied] = useState(false);
@@ -32,31 +33,7 @@ export default function WithdrawalPage() {
       lastUpdate="13 stycznia 2026 r."
     >
       <div className="xl:max-w-8xl mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-3">
-          {withdrawalSteps.map((box, i) => (
-            <div
-              key={i}
-              className={`rounded-[2.5rem] border border-border p-10 transition-all ${box.highlight ? "border-accent/30 bg-accent/5" : "bg-bg-card"}`}
-            >
-              <div
-                className={`mb-8 flex h-12 w-12 items-center justify-center rounded-2xl ${box.highlight ? "bg-accent text-bg-body" : "bg-accent/10 text-accent"}`}
-              >
-                <box.icon size={24} />
-              </div>
-              <span className="mb-2 block text-[10px] font-black tracking-[0.4em] text-accent uppercase">
-                {box.label}
-              </span>
-              <h3
-                className={`mb-4 text-sm font-extrabold tracking-tighter uppercase ${box.highlight ? "text-accent" : "text-text-primary"}`}
-              >
-                {box.val}
-              </h3>
-              <p className="text-[13px] leading-relaxed text-text-secondary opacity-60">
-                {box.sub}
-              </p>
-            </div>
-          ))}
-        </div>
+        <LegalStepsCards items={withdrawalSteps} />
         <section className="mt-32 grid items-start gap-12 lg:grid-cols-12">
           <div className="space-y-12 lg:col-span-7">
             <h2 className="text-4xl font-extrabold tracking-tighter text-text-primary uppercase">
