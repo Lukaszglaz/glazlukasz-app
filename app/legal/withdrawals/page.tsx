@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, Copy, Lock, AlertTriangle } from "lucide-react";
+import { Lock, AlertTriangle } from "lucide-react";
 import { LegalWrapper } from "@/components/shared/LegalWrapper/LegalWrapper";
 
 import {
@@ -10,8 +10,8 @@ import {
   withdrawalSectionsData,
 } from "@/app/data/legal/withdrawals/withdrawalData";
 import { LegalStepsCards } from "@/components/shared/LegalStepsCards/LegalStepsCards";
-import { complaint } from "@/app/data/legal/complaints/complaintData";
 import { LegalCopySheet } from "@/components/shared/LegalCopySheet/LegalCopySheet";
+import { LegalFeaturesGrid } from "@/components/shared/LegalFeaturesGrid/LegalFeaturesGrid";
 
 export default function WithdrawalPage() {
   const [copied, setCopied] = useState(false);
@@ -38,23 +38,12 @@ export default function WithdrawalPage() {
         <LegalStepsCards items={withdrawalSteps} />
         <section className="mt-32 grid items-start gap-12 lg:grid-cols-12">
           <div className="space-y-12 lg:col-span-7">
-            <h2 className="text-4xl font-extrabold tracking-tighter text-text-primary uppercase">
-              Proces <span className="text-accent">Zwrotu</span>
-            </h2>
             <div className="grid gap-8 sm:grid-cols-2">
-              {withdrawalFeatures.map((item, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <item.icon className="shrink-0 text-accent" size={20} />
-                  <div>
-                    <h4 className="text-[13px] font-black tracking-widest text-text-primary uppercase">
-                      {item.title}
-                    </h4>
-                    <p className="text-[12px] text-text-secondary">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+              <LegalFeaturesGrid
+                title="Procedura"
+                accentTitle="Zwrotu"
+                features={withdrawalFeatures}
+              />
             </div>
           </div>
           <div className="relative overflow-hidden rounded-[2.5rem] border border-destructive/20 bg-destructive/5 p-10 lg:col-span-5">
