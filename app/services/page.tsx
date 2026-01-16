@@ -2,6 +2,7 @@ import { ServicesExplorer } from "@/components/offer/ServicesExplorer/ServicesEx
 import { ButtonLink } from "@/components/shared/ButtonLink/ButtonLink";
 import { HeadlineGroup } from "@/components/shared/HeadlineGroup/HeadlineGroup";
 import { Pricing } from "@/components/offer/Pricing/Pricing";
+import { Suspense } from "react";
 
 export default function ServicesPage() {
   return (
@@ -22,8 +23,14 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      <div id="#services-box" className="mt-16">
-        <ServicesExplorer />
+      <div id="services-box" className="mt-16">
+        <Suspense
+          fallback={
+            <div className="h-96 animate-pulse rounded-2xl bg-white/5" />
+          }
+        >
+          <ServicesExplorer />
+        </Suspense>
       </div>
 
       <div>
