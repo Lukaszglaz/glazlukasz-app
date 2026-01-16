@@ -6,6 +6,8 @@ import { HeaderMobile } from "@/components/shared/Header/HeaderMobile";
 import logoFullWhite from "@/assets/images/logo/LogoFullWhite.png";
 import { Footer } from "@/components/shared/Footer/Footer";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { GoogleTagManager } from "@next/third-parties/google";
+import { CookieBanner } from "@/components/shared/CookieBanner/CookieBanner";
 
 const poppins = Poppins({
   subsets: ["latin", "latin-ext"],
@@ -77,12 +79,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" className={poppins.className}>
-      <body className={"antialiased"}>
+    <html lang="pl" className={poppins.variable} suppressHydrationWarning>
+      <body className={`${poppins.className} antialiased`}>
         <HeaderMobile {...headerProps} />
         <Header {...headerProps} />
         <main>{children}</main>
         <Footer {...footerProps} />
+
+        <CookieBanner />
+        <GoogleTagManager gtmId="GTM-KXDMMPH6" />
       </body>
     </html>
   );
