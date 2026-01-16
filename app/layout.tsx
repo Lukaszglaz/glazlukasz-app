@@ -61,13 +61,21 @@ const footerProps = {
     { label: "Reklamacje i zwroty", href: "/legal/complaints" },
   ],
   socialMedia: [
-    { name: "Facebook", href: "https://facebook.com", icon: Facebook },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/macienewyt",
+      icon: Facebook,
+    },
     {
       name: "Instagram",
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/lukasz.321/",
       icon: Instagram,
     },
-    { name: "Linkedin", href: "https://linkedin.com", icon: Linkedin },
+    {
+      name: "Linkedin",
+      href: "https://www.linkedin.com/in/%C5%82ukasz-g%C5%82az-3865862a7/",
+      icon: Linkedin,
+    },
   ],
 };
 

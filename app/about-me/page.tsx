@@ -48,7 +48,7 @@ export default function AboutMePage() {
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-2" />
               </ButtonLink>
               <ButtonLink
-                href="/realizacje"
+                href="/realizations"
                 variant="secondary"
                 size="lg"
                 className="px-8 font-bold uppercase"
