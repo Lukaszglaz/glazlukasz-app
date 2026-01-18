@@ -20,6 +20,7 @@ export const termsStatusData: TermsStatusItem[] = [
           "Łukasz Głaz. Działalność nierejestrowana (art. 5 ust. 1 ustawy Prawo przedsiębiorców), marka glazlukasz.pl.",
         isLarge: true,
       },
+
       {
         label: "System Rozliczeń",
         content:
