@@ -1,4 +1,4 @@
-import projectOneImage from "@/assets/images/showCaseCard/ProjectOne.jpg";
+import comingSoon from "@/assets/images/showCaseCard/comingSoon.jpg";
 import projectTwoImage from "@/assets/images/showCaseCard/ProjectTwo.jpg";
 import { StaticImageData } from "next/image";
 
@@ -12,19 +12,19 @@ export interface ShowcaseDataItem {
 }
 export const showcaseData: ShowcaseDataItem[] = [
   {
-    title: "Strony WWW Generujące Konwersje",
+    title: "Pojawi się Wkrótce: Realizacje Premium",
     description:
-      "Portfolio prezentuje projekty, które łączą wyjątkowy design z perfekcyjną optymalizacją pod kątem konwersji i intuicyjnej obsługi (UX). Odkryj, jak szczegółowa dbałość o detale przekłada się na mierzalny sukces.",
-    imageUrl: projectOneImage,
+      "Nadchodzi kolekcja moich najlepszych projektów. Od innowacyjnego designu po bezbłędną funkcjonalność – przygotuj się na inspirujące przykłady naszej pracy.",
+    imageUrl: comingSoon,
     reverse: false,
     href: "#",
     cta: "Zobacz moją ofertę",
   },
   {
-    title: "Zaawansowane Aplikacje Web",
+    title: "Pojawi się Wkrótce: Realizacje Premium",
     description:
-      "Przejrzyj nasze najnowsze realizacje, które wyróżniają się unikalnym podejściem do logiki biznesowej i skalowalnej architektury. Zobacz, jak profesjonalna wizja i techniczna solidność napędzają trwały rozwój.",
-    imageUrl: projectTwoImage,
+      "Nadchodzi kolekcja moich najlepszych projektów. Od innowacyjnego designu po bezbłędną funkcjonalność – przygotuj się na inspirujące przykłady naszej pracy.",
+    imageUrl: comingSoon,
     reverse: true,
     href: "#",
     cta: "Zobacz moje aplikacje",
